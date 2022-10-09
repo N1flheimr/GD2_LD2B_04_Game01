@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 3074167148813703551}
   - component: {fileID: 3074167148813703550}
   m_Layer: 18
-  m_Name: TestGunProjectile
+  m_Name: TestGunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 450
+  Speed: 500
   Acceleration: 3
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 2
-  DamageCausedKnockbackForce: {x: 250, y: 10, z: 0}
+  DamageCausedKnockbackForce: {x: 10, y: 10, z: 0}
   InvincibilityDuration: 0.5
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
