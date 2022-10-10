@@ -11,9 +11,10 @@ namespace MoreMountains.TopDownEngine
     public class HealthUpgrade : Upgrade
     {
         [SerializeField] private float amount;
+
         public override void Apply(Transform targetTransform)
         {
-            Debug.Log("Health Upgrade!");
+            targetTransform.GetComponent<Health>().MaximumHealth += amount;
         }
     }
 }

@@ -8,30 +8,37 @@ namespace MoreMountains.TopDownEngine
 {
     public class UpgradeButtonUI : MonoBehaviour
     {
-        [SerializeField] private Upgrade _clickedUpgrade;
+        [SerializeField] private Upgrade _selectedUpgrade;
 
         [SerializeField] private Image _upgradeIcon;
         [SerializeField] private TextMeshProUGUI _upgradeName;
         [SerializeField] private TextMeshProUGUI _description;
 
-
-        [SerializeField] private Button upgradeButton;
-        [SerializeField] private Transform playerTransform;
+        [SerializeField] private Button _button;
+        [SerializeField] private Transform _playerTransform;
 
         void Start()
         {
-            upgradeButton.onClick.AddListener(() =>
-            {
-                _clickedUpgrade.Apply(playerTransform);
-            });
+            SetUpgrade(_selectedUpgrade);
+        }
+
+        public void SetUpgrade(Upgrade upgrade)
+        {
+            _selectedUpgrade = upgrade;
             UpdateUpgradeVisual();
+            _button.onClick.AddListener(() =>
+            {
+                _selectedUpgrade.Apply(_playerTransform);
+                Debug.Log("Health Upgraded. Max HP: " + _playerTransform.GetComponent<Health>().MaximumHealth);
+                Debug.Log("Current HP: " + _playerTransform.GetComponent<Health>().CurrentHealth);
+            });
         }
 
         public void UpdateUpgradeVisual()
         {
-            _upgradeIcon.sprite = _clickedUpgrade._upgradeIcon;
-            _upgradeName.text = _clickedUpgrade._upgradeName;
-            _description.text = _clickedUpgrade._description;
+            _upgradeIcon.sprite = _selectedUpgrade._upgradeIcon;
+            _upgradeName.text = _selectedUpgrade._upgradeName;
+            _description.text = _selectedUpgrade._description;
         }
     }
 }

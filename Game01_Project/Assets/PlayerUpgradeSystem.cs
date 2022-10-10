@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerUpgradeSystem : MonoBehaviour
+namespace MoreMountains.TopDownEngine
 {
-    public static PlayerUpgradeSystem Instance { get; private set; }
-
-    private void Awake()
+    public static class PlayerUpgradeSystem
     {
-        if (Instance != null)
+        private static List<Upgrade> appliedUpgradesList = new List<Upgrade>();
+
+        public static List<Upgrade> GetAppliedUpgradesList()
         {
-            Debug.LogError("Error");
-            Destroy(gameObject);
-            return;
+            return appliedUpgradesList;
         }
-        Instance = this;
+
+        public static void AddAppliedUpgradesList(Upgrade newUpgrade)
+        {
+            appliedUpgradesList.Add(newUpgrade);
+        }
     }
 }
