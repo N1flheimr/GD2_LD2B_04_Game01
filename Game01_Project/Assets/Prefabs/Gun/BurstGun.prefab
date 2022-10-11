@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3734164810382328179}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0.2, z: 0.375}
-  m_LocalScale: {x: 24, y: 14, z: 10}
+  m_LocalScale: {x: 24, y: 14, z: 12}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6270564715775739392}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 149681153416365102}
   - component: {fileID: 9161930206394006813}
   m_Layer: 0
-  m_Name: TestGun
+  m_Name: BurstGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,19 +132,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: 
   WeaponCurrentlyActive: 1
-  TriggerMode: 1
-  DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 1
-  TimeBetweenUses: 1
+  TriggerMode: 0
+  DelayBeforeUse: 0.135
+  DelayBeforeUseReleaseInterruption: 0
+  TimeBetweenUses: 0
   TimeBetweenUsesReleaseInterruption: 1
-  UseBurstMode: 0
+  UseBurstMode: 1
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
   MagazineBased: 1
-  MagazineSize: 30
+  MagazineSize: 21
   AutoReload: 1
-  NoInputReload: 0
-  ReloadTime: 2
+  NoInputReload: 1
+  ReloadTime: 1.2
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
@@ -182,10 +182,10 @@ MonoBehaviour:
   WeaponStopMMFeedback: {fileID: 0}
   WeaponReloadMMFeedback: {fileID: 0}
   WeaponReloadNeededMMFeedback: {fileID: 0}
-  InitializeOnStart: 0
+  InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 0, y: 0, z: 0}
+  ProjectileSpawnOffset: {x: 0, y: 0.37, z: 0.3}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
   ProjectilesPerShot: 1
   SpawnTransforms: []
@@ -193,7 +193,7 @@ MonoBehaviour:
   Spread: {x: 0, y: 0, z: 0}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 0, y: 0, z: 1}
+  SpawnPosition: {x: 0, y: 0.37, z: 1.3}
   SpawnFeedbacks: []
   TestShootButton: 0
 --- !u!114 &149681153416365102
@@ -218,12 +218,12 @@ MonoBehaviour:
   Reticle: {fileID: 1373789777524232, guid: 65207112181da7b41bee2bb13af8b883, type: 3}
   ReticleDistance: 0
   ReticleHeight: 0
-  ReticleAtMousePosition: 0
-  RotateReticle: 0
+  ReticleAtMousePosition: 1
+  RotateReticle: 1
   ReplaceMousePointer: 1
   MouseDeadZoneRadius: 0.5
   DisplayReticle: 1
-  MoveCameraTargetTowardsReticle: 0
+  MoveCameraTargetTowardsReticle: 1
   CameraTargetOffset: 0.3
   CameraTargetMaxDistance: 10
   CameraTargetSpeed: 5
@@ -249,7 +249,7 @@ MonoBehaviour:
   MutualizeWaitingPools: 1
   NestWaitingPool: 1
   NestUnderThis: 0
-  GameObjectToPool: {fileID: 3074167148813703489, guid: 9b74d63ae593fb3448a14a596ef283eb,
+  GameObjectToPool: {fileID: 1854097648223014, guid: 68237974b013e10409136e0a91ba73a1,
     type: 3}
   PoolSize: 20
   PoolCanExpand: 1

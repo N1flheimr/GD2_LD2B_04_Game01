@@ -6,16 +6,16 @@ namespace MoreMountains.TopDownEngine
 {
     public static class PlayerUpgradeSystem
     {
-        private static List<Upgrade> appliedUpgradesList = new List<Upgrade>();
+        private static List<PowerUp> appliedPowerUpList = new List<PowerUp>();
 
-        public static List<Upgrade> GetAppliedUpgradesList()
+        public static List<PowerUp> GetAppliedPowerUpList()
         {
-            return appliedUpgradesList;
+            return appliedPowerUpList;
         }
 
-        public static void AddAppliedUpgradesList(Upgrade newUpgrade)
+        public static void AddAppliedUpgradesList(PowerUp newPowerUp)
         {
-            appliedUpgradesList.Add(newUpgrade);
+            appliedPowerUpList.Add(newPowerUp);
         }
     }
 }

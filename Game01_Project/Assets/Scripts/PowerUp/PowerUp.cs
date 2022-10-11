@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace MoreMountains.TopDownEngine
 {
-    public abstract class Upgrade : ScriptableObject
+    public abstract class PowerUp : ScriptableObject
     {
-        public Sprite _upgradeIcon;
-        public string _upgradeName;
+        public Sprite _powerUpIcon;
+        public string _powerUpName;
         public string _description;
 
         public abstract void Apply(Transform targetTransform);

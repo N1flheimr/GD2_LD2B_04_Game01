@@ -20173,7 +20173,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801408263114154}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.45169073, z: 0, w: 0.8921746}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20198,7 +20198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7ce0b8cf4b34859b9e359283b2e7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
+  WeaponName: Guts Shotgun
   WeaponCurrentlyActive: 1
   TriggerMode: 0
   DelayBeforeUse: 0
@@ -20212,7 +20212,7 @@ MonoBehaviour:
   MagazineSize: 6
   AutoReload: 1
   NoInputReload: 1
-  ReloadTime: 0.75
+  ReloadTime: 1
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
@@ -20262,7 +20262,7 @@ MonoBehaviour:
   Spread: {x: 5, y: 5, z: 5}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 0, y: 0.16, z: 0.57}
+  SpawnPosition: {x: 0.45940518, y: 0.16, z: 0.33741203}
   SpawnFeedbacks: []
   TestShootButton: 0
 --- !u!95 &95889161802339608
@@ -20338,7 +20338,7 @@ MonoBehaviour:
   MutualizeWaitingPools: 1
   NestWaitingPool: 1
   NestUnderThis: 0
-  GameObjectToPool: {fileID: 1854097648223014, guid: b068834a653f6c74e9587ad48b51c650,
+  GameObjectToPool: {fileID: 1854097648223014, guid: 97173160ba4507d438e2849bbd96a1ed,
     type: 3}
   PoolSize: 20
   PoolCanExpand: 1

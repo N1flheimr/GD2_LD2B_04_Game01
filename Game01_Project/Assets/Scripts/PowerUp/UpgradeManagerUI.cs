@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 namespace MoreMountains.TopDownEngine
 {
-    public class UpgradeManagerUI : MonoBehaviour
+    public class PowerUpManagerUI : MonoBehaviour
     {
 
         [SerializeField] private Transform upgradeButtonPrefab;
         [SerializeField] private Transform upgradeButtonContainerTransform;
 
-        private List<UpgradeButtonUI> UpgradeButtonUIList;
+        private List<PowerUpButtonUI> UpgradeButtonUIList;
 
         private void Awake()
         {
-            UpgradeButtonUIList = new List<UpgradeButtonUI>();
+            UpgradeButtonUIList = new List<PowerUpButtonUI>();
         }
     }
 }
