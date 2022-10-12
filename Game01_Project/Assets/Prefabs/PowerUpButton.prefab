@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 2224657267126733668}
   - component: {fileID: 7002423195712347343}
   m_Layer: 5
-  m_Name: UpgradeButton
+  m_Name: PowerUpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

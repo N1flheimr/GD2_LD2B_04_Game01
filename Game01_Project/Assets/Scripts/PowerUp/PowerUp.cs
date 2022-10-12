@@ -11,6 +11,11 @@ namespace MoreMountains.TopDownEngine
         public string _powerUpName;
         public string _description;
 
+        protected virtual void Awake()
+        {
+            
+        }
+
         public abstract void Apply(Transform targetTransform);
     }
 }

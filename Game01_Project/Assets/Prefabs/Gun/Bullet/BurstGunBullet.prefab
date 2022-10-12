@@ -4904,7 +4904,7 @@ GameObject:
   - component: {fileID: 114352293955758238}
   - component: {fileID: 114675000447675420}
   m_Layer: 18
-  m_Name: HandgunBullet
+  m_Name: BurstGunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5043,8 +5043,8 @@ MonoBehaviour:
     m_Bits: 12032
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 20
-  MaxDamageCaused: 10
+  MinDamageCaused: 5
+  MaxDamageCaused: 7
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
