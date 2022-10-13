@@ -44596,9 +44596,15 @@ GameObject:
   - component: {fileID: 141769261663588876}
   - component: {fileID: 141769261663588979}
   - component: {fileID: 141769261663588978}
+  - component: {fileID: 7907466997635482888}
+  - component: {fileID: 916281285763057215}
+  - component: {fileID: 194382837734034226}
+  - component: {fileID: 1141588262493002882}
+  - component: {fileID: 7436392145991024846}
+  - component: {fileID: 7082643557035362445}
   m_Layer: 13
   m_Name: Enemy HeavyArtillery
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44659,7 +44665,7 @@ MonoBehaviour:
   RunAnimatorSanityChecks: 0
   DisableAnimatorLogs: 1
   CharacterModel: {fileID: 141769261042854728}
-  CharacterHealth: {fileID: 0}
+  CharacterHealth: {fileID: 141769261663588978}
   SendStateChangeEvents: 1
   AdditionalAbilityNodes:
   - {fileID: 141769260132801153}
@@ -44677,12 +44683,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1
-  m_Radius: 1
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.42, z: 0}
 --- !u!54 &141769261663588876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44791,14 +44797,14 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 150
+  MaximumHealth: 150
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
-  ImmuneToKnockback: 0
+  ImmuneToKnockback: 1
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
   DestroyOnDeath: 1
@@ -44821,6 +44827,221 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
+--- !u!114 &7907466997635482888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2dd01ffdd1cc045a614bd354672723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  RotationMode: 0
+  CharacterRotationAuthorized: 1
+  ShouldRotateToFaceMovementDirection: 1
+  MovementRotationSpeed: 0
+  MovementRotatingModel: {fileID: 141769261042854728}
+  RotateToFaceMovementDirectionSpeed: 10
+  AbsoluteThresholdMovement: 0.5
+  ModelDirection: {x: 0, y: 0, z: 0}
+  ModelAngles: {x: 0, y: 0, z: 0}
+  ShouldRotateToFaceWeaponDirection: 1
+  WeaponRotationSpeed: 0
+  WeaponRotatingModel: {fileID: 0}
+  RotateToFaceWeaponDirectionSpeed: 10
+  AbsoluteThresholdWeapon: 0.5
+  LockVerticalRotation: 1
+  RotationSpeedResetSpeed: 2
+  RotationOffsetSmoothSpeed: 1
+  ForcedRotation: 0
+  ForcedRotationDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &916281285763057215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a52f88e226e0c459085cd4e4a38a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  ForcedCrouch: 0
+  CrawlAuthorized: 1
+  CrawlSpeed: 4
+  ResizeColliderWhenCrouched: 0
+  CrouchedColliderHeight: 1.25
+  ObjectsToOffset: []
+  OffsetCrouch: {x: 0, y: 0, z: 0}
+  OffsetCrawl: {x: 0, y: 0, z: 0}
+  OffsetSpeed: 5
+  InATunnel: 0
+--- !u!114 &194382837734034226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c752f2958a762a144a00333487ac892f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  JumpProportionalToPress: 1
+  MinimumPressTime: 0.4
+  JumpForce: 800
+  JumpHeight: 4
+  CanJumpOnTooSteepSlopes: 1
+  ResetJumpsOnTooSteepSlopes: 0
+  NumberOfJumps: 1
+  NumberOfJumpsLeft: 0
+  JumpStartFeedback: {fileID: 0}
+  JumpStopFeedback: {fileID: 0}
+--- !u!114 &1141588262493002882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893d1a748dcc4a247b555ae136c3d0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  DashMode: 1
+  DashSpace: 0
+  DashDirection: {x: 0, y: 0, z: 1}
+  DashDistance: 10
+  DashDuration: 0.5
+  DashCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AllowDashWhenJumping: 0
+  Cooldown:
+    Unlimited: 0
+    ConsumptionDuration: 2
+    PauseOnEmptyDuration: 1
+    RefillDuration: 1
+    CanInterruptRefill: 1
+    CooldownState: 0
+    CurrentDurationLeft: 0
+  InvincibleWhileDashing: 0
+  DashFeedback: {fileID: 0}
+--- !u!114 &7436392145991024846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69614a4a3cfd06d4e8388acafdb774bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  Movement: 0
+  InputAuthorized: 1
+  AnalogInput: 0
+  ScriptDrivenInput: 0
+  WalkSpeed: 6
+  ShouldSetMovement: 1
+  IdleThreshold: 0.05
+  Acceleration: 10
+  Deceleration: 10
+  InterpolateMovementSpeed: 0
+  WalkParticles: []
+  TouchTheGroundParticles: []
+  TouchTheGroundSfx: []
+--- !u!114 &7082643557035362445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141769261663588977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d103439fc2940e347937487a70ea01e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  RunSpeed: 16
+  AutoRun: 0
+  AutoRunThreshold: 0.6
 --- !u!1 &141769261665784432
 GameObject:
   m_ObjectHideFlags: 0

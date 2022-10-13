@@ -25,9 +25,9 @@ namespace MoreMountains.TopDownEngine
         private void Start()
         {
             CreatePowerUpButtons();
-            UpdatePowerUpVisual();
         }
-        private void CreatePowerUpButtons()
+
+        public void CreatePowerUpButtons()
         {
             foreach (Transform buttonTransform in powerUpButtonContainerTransform)
             {
@@ -38,13 +38,19 @@ namespace MoreMountains.TopDownEngine
 
             for (int i = 0; i < MAX_POWER_UP_NUMBER; i++)
             {
+                PowerUpManager powerUpManager = PowerUpManager.Instance;
+                int randomIndex = Random.Range(0, powerUpManager.GetAvailablePowerUpList().Count);
+
                 Transform powerUpButtonTransform = Instantiate(powerUpButtonPrefab, powerUpButtonContainerTransform);
                 PowerUpButtonUI powerUpButtonUI = powerUpButtonTransform.GetComponent<PowerUpButtonUI>();
                 powerUpButtonUIList.Add(powerUpButtonUI);
+
+                powerUpButtonUI.SetPowerUp(powerUpManager.GetAvailablePowerUpList()[randomIndex]);
+                UpdatePowerUpVisual();
             }
         }
 
-        private void UpdatePowerUpVisual()
+         void UpdatePowerUpVisual()
         {
             foreach(PowerUpButtonUI powerUpButtonUI in powerUpButtonUIList)
             {

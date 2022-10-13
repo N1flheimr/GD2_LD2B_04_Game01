@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: 4eef361a25c80c24ebb1467c82787d4c
+  productGUID: 8d84fa97fde78b241b93c788f2f98ba5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -784,13 +784,7 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled:
-    Build: 0
-    Collab: 0
-    Game Performance: 0
-    Purchasing: 0
-    UDP: 0
-    Unity Ads: 0
+  cloudServicesEnabled: {}
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -807,7 +801,7 @@ PlayerSettings:
   cloudProjectId: 3c3e1a17-8ae6-4f08-a616-46cdcd59d173
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GD2_LD2B_04_Game01
+  projectName: 
   organizationId: n1flheimr
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1

@@ -6,13 +6,12 @@ namespace MoreMountains.TopDownEngine
 {
     public class Test : MonoBehaviour
     {
-        public GameObject player;
+        public PowerUpManagerUI powerUpManagerUI;
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
-                player.GetComponent<Health>().CurrentHealth -= 10;
-                Debug.Log("HP: " + player.GetComponent<Health>().CurrentHealth);
+                powerUpManagerUI.CreatePowerUpButtons();
             }
         }
     }

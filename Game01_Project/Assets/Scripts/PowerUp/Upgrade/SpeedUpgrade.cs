@@ -11,7 +11,7 @@ namespace MoreMountains.TopDownEngine
         public override void Apply(Transform targetTransform)
         {
             CharacterMovement characterMovement = targetTransform.GetComponent<CharacterMovement>();
-            float speedIncreaseAmount = characterMovement.WalkSpeed * (amount / 100);
+            float speedIncreaseAmount = characterMovement.MovementSpeed * (amount / 100);
             characterMovement.MovementSpeed += speedIncreaseAmount;
             Debug.Log("walk speed: " + characterMovement.MovementSpeed);
         }

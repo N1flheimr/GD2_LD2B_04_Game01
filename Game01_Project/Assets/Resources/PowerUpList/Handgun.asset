@@ -10,10 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 857a418abb5336e43ab45af465917408, type: 3}
-  m_Name: Shotgun
+  m_Name: Handgun
   m_EditorClassIdentifier: 
-  _powerUpIcon: {fileID: 21300000, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
-  _powerUpName: Guts Shotgun
-  _description: 8 round
-  newWeapon: {fileID: 114922138254092764, guid: 06b31264add18314e88ceddf047938b4,
+  powerUpIcon: {fileID: 21300002, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
+  powerUpName: HJKE-11
+  description: 'Type: Single Shot
+
+    Damage: 13-18
+
+    Magazine: 30
+
+'
+  powerUpType: 1
+  newWeapon: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
     type: 3}

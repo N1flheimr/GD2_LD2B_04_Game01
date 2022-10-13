@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7f0d38b206f9854389ff0b793ca6d3c, type: 3}
-  m_Name: Immune To Knockback
+  m_Script: {fileID: 11500000, guid: f075d5e6d50ceac49b8d0e8a2365c9c5, type: 3}
+  m_Name: HealthUpgrade
   m_EditorClassIdentifier: 
-  _powerUpIcon: {fileID: 21300000, guid: 7b43b03e1974cb046a48f8202b39f273, type: 3}
-  _powerUpName: Ground Plating
-  _description: Grants full immunity against knockback.
+  powerUpIcon: {fileID: 21300000, guid: 27777cdbffe9f854da2159ef975c3ca2, type: 3}
+  powerUpName: Syn-Heart
+  description: Increase Max Health by 25
+  powerUpType: 0
+  amount: 25

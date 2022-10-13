@@ -17,14 +17,11 @@ namespace MoreMountains.TopDownEngine
         [SerializeField] private Button _button;
         [SerializeField] private Transform _playerTransform;
 
-        void Start()
-        {
-            SetPowerUp(_selectedPowerUp);
-        }
 
         public void SetPowerUp(PowerUp upgrade)
         {
             _selectedPowerUp = upgrade;
+            _playerTransform = GameObject.FindWithTag("Player").transform;
             UpdatePowerUpVisual();
             _button.onClick.AddListener(() =>
             {
@@ -34,9 +31,9 @@ namespace MoreMountains.TopDownEngine
 
         public void UpdatePowerUpVisual()
         {
-            _upgradeIcon.sprite = _selectedPowerUp._powerUpIcon;
-            _upgradeName.text = _selectedPowerUp._powerUpName;
-            _description.text = _selectedPowerUp._description;
+            _upgradeIcon.sprite = _selectedPowerUp.powerUpIcon;
+            _upgradeName.text = _selectedPowerUp.powerUpName;
+            _description.text = _selectedPowerUp.description;
         }
     }
 }

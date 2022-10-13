@@ -133,10 +133,10 @@ MonoBehaviour:
   WeaponName: 
   WeaponCurrentlyActive: 1
   TriggerMode: 0
-  DelayBeforeUse: 0.135
+  DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0
-  TimeBetweenUsesReleaseInterruption: 1
+  TimeBetweenUses: 0.35
+  TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 1
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
