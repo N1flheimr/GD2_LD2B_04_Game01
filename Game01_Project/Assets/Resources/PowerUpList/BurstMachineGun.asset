@@ -16,7 +16,7 @@ MonoBehaviour:
   powerUpName: HJSH-18 Masamune
   description: 'Type: Burst Fire
 
-    Damage: 8-11
+    Damage: 10-12
 
     Magazine: 24'
   powerUpType: 1

@@ -283,6 +283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyTank
       objectReference: {fileID: 0}
+    - target: {fileID: 141769261663588977, guid: f27c627f890c94f4d822356c12935fb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 141769261663588978, guid: f27c627f890c94f4d822356c12935fb2,
         type: 3}
       propertyPath: InitialHealth
@@ -2630,7 +2635,7 @@ PrefabInstance:
     - target: {fileID: 3667650681034756700, guid: 53d2c5acc40c88d4bae5badbe38221b5,
         type: 3}
       propertyPath: m_Range
-      value: 8.06
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3667650681034756700, guid: 53d2c5acc40c88d4bae5badbe38221b5,
         type: 3}
@@ -2640,7 +2645,7 @@ PrefabInstance:
     - target: {fileID: 3667650681034756700, guid: 53d2c5acc40c88d4bae5badbe38221b5,
         type: 3}
       propertyPath: m_Intensity
-      value: 4.4
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5314014531946021559, guid: 53d2c5acc40c88d4bae5badbe38221b5,
         type: 3}
