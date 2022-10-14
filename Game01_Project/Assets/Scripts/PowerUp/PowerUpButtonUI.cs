@@ -17,7 +17,6 @@ namespace MoreMountains.TopDownEngine
         [SerializeField] private Button _button;
         [SerializeField] private Transform _playerTransform;
 
-
         public void SetPowerUp(PowerUp upgrade)
         {
             _selectedPowerUp = upgrade;
