@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 857a418abb5336e43ab45af465917408, type: 3}
-  m_Name: Handgun
+  m_Name: BurstMachineGun
   m_EditorClassIdentifier: 
-  powerUpIcon: {fileID: 21300002, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
-  powerUpName: HJKE-11
-  description: 'Type: Single Shot
+  powerUpIcon: {fileID: 21300008, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
+  powerUpName: HJSH-18 Masamune
+  description: 'Type: Burst Fire
 
-    Damage: 7-9
+    Damage: 10-12
 
-    Magazine: 30
-
-'
+    Magazine: 24'
   powerUpType: 1
-  newWeapon: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+  newWeapon: {fileID: 5260944794077705416, guid: a0b1c8a6267faad47b17b927f0b54b68,
     type: 3}
