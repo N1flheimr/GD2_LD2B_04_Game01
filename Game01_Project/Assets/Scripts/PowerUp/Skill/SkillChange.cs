@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MoreMountains.TopDownEngine
 {
-    [CreateAssetMenu(menuName = "PowerUpSystem/Weapon")]
+    [CreateAssetMenu(menuName = "PowerUpSystem/Skill")]
     public class SkillChange : PowerUp
     {
         [SerializeField] private Skill newSkill;
