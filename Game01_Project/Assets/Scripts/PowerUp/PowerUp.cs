@@ -13,7 +13,6 @@ namespace MoreMountains.TopDownEngine
 {
     public abstract class PowerUp : ScriptableObject
     {
-
         public Sprite powerUpIcon;
         [TextArea]
         public string powerUpName; 

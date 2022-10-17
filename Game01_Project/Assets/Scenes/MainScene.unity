@@ -1898,6 +1898,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7848730206413164994, guid: 53d2c5acc40c88d4bae5badbe38221b5,
+        type: 3}
+      propertyPath: Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848730206413164994, guid: 53d2c5acc40c88d4bae5badbe38221b5,
+        type: 3}
+      propertyPath: OneTimeDuration
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7848730206413164996, guid: 53d2c5acc40c88d4bae5badbe38221b5,
         type: 3}
       propertyPath: m_Name
@@ -2373,9 +2383,10 @@ MonoBehaviour:
   AbilityStopSfx: {fileID: 0}
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
+  currentSkill: {fileID: 0}
   cooldown:
     Unlimited: 0
     ConsumptionDuration: 2

@@ -11,7 +11,12 @@ namespace MoreMountains.TopDownEngine
         public override void Apply(Transform targetTransform)
         {
             CharacterSkill characterSkill = targetTransform.GetComponent<CharacterSkill>();
+            if (!characterSkill.AbilityPermitted)
+            {
+                characterSkill.AbilityPermitted = true;
+            }
             characterSkill.ChangeSkill(newSkill);
+            Debug.Log("Skill Changed: " + characterSkill.currentSkill.name);
         }
     }
 }
