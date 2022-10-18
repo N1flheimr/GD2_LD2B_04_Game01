@@ -15,6 +15,7 @@ namespace MoreMountains.TopDownEngine
         [Tooltip("the cooldown for this ability")]
         public MMCooldown cooldown;
 
+
         /// <summary>
         /// Here you should initialize our parameters
         /// </summary>
@@ -41,7 +42,7 @@ namespace MoreMountains.TopDownEngine
             {
                 PlayAbilityStartFeedbacks();
 
-                currentSkill.Activate();
+                currentSkill.Activate(cooldown);
                 cooldown.Start();
             }
         }
@@ -50,7 +51,7 @@ namespace MoreMountains.TopDownEngine
         {
             StopStartFeedbacks();
             PlayAbilityStopFeedbacks();
-            currentSkill.Stop();
+            currentSkill.Stop(cooldown);
         }
 
         /// <summary>
@@ -78,6 +79,7 @@ namespace MoreMountains.TopDownEngine
         {
             currentSkill = skill;
             cooldown = currentSkill.cooldown;
+            cooldown.CurrentDurationLeft = currentSkill.cooldown.RefillDuration;
         }
     }
 }

@@ -15,14 +15,14 @@ MonoBehaviour:
   name: SlowDownTime
   cooldown:
     Unlimited: 0
-    ConsumptionDuration: 2
-    PauseOnEmptyDuration: 1
-    RefillDuration: 1
-    CanInterruptRefill: 1
-    CooldownState: 0
-    CurrentDurationLeft: 2
+    ConsumptionDuration: 0
+    PauseOnEmptyDuration: 0
+    RefillDuration: 45
+    CanInterruptRefill: 0
+    CooldownState: 3
+    CurrentDurationLeft: 28.122301
   Mode: 0
-  oneTimeDuration: 6
+  oneTimeDuration: 12
   TimeScale: 0.5
   LerpTimeScale: 1
   LerpSpeed: 5

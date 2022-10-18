@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using System;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -20,13 +21,17 @@ namespace MoreMountains.TopDownEngine
         [Tooltip("the speed at which to lerp the timescale")]
         public float LerpSpeed = 5f;
 
-        public override void Activate()
+        public override void Activate(MMCooldown cooldown)
         {
+            CharacterMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
+
+            playerMovement.ApplyMovementMultiplier((playerMovement.MovementSpeedMultiplier / TimeScale), oneTimeDuration * TimeScale);
+
             MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, TimeScale, oneTimeDuration, LerpTimeScale, LerpSpeed, false);
             cooldown.Start();
         }
 
-        public override void Stop()
+        public override void Stop(MMCooldown cooldown)
         {
             cooldown.Stop();
             Debug.Log("Skill Stop");

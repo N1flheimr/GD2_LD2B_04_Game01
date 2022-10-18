@@ -18,10 +18,10 @@ namespace MoreMountains.TopDownEngine
         public Modes Mode = Modes.Continuous;
 
         [MMEnumCondition("Mode", (int)Modes.OneTime)]
-        public float oneTimeDuration = 1f;	
+        public float oneTimeDuration = 1f;
 
 
-        public abstract void Activate();
-        public abstract void Stop();
+        public abstract void Activate(MMCooldown cooldown);
+        public abstract void Stop(MMCooldown cooldown);
     }
 }
