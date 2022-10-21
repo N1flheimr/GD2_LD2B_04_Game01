@@ -10,7 +10,7 @@ namespace MoreMountains.TopDownEngine
 
         public override void Apply(Transform targetTransform)
         {
-            throw new System.NotImplementedException();
+
         }
     }
 }

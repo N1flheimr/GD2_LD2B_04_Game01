@@ -20262,7 +20262,7 @@ MonoBehaviour:
   Spread: {x: 25, y: 25, z: 15}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 0.45940518, y: 0.16, z: 0.33741203}
+  SpawnPosition: {x: 1.2895584, y: 0.5, z: 0.94712156}
   SpawnFeedbacks: []
   TestShootButton: 0
 --- !u!95 &95889161802339608
