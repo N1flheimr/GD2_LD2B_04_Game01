@@ -9,6 +9,7 @@ namespace MoreMountains.TopDownEngine
         public override void Apply(Transform targetTransform)
         {
 
+            PowerUpSelectionCompleted();
         }
     }
 }

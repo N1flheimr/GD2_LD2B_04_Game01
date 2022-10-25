@@ -12,6 +12,7 @@ namespace MoreMountains.TopDownEngine
             Health health = targetTransform.GetComponent<Health>();
             health.ImmuneToKnockback = true;
             Debug.Log("ImmuneToKnockback = "+health.ImmuneToKnockback);
+            PowerUpSelectionCompleted();
         }
     }
 }

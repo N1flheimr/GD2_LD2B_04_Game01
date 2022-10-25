@@ -16,6 +16,7 @@ namespace MoreMountains.TopDownEngine
                 characterSkill.AbilityPermitted = true;
             }
             characterSkill.ChangeSkill(newSkill);
+            PowerUpSelectionCompleted();
             Debug.Log("Skill Changed: " + characterSkill.currentSkill.name);
         }
     }

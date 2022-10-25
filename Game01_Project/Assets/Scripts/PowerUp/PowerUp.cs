@@ -24,6 +24,8 @@ namespace MoreMountains.TopDownEngine
 {
     public abstract class PowerUp : ScriptableObject
     {
+        public static event EventHandler OnPowerUpSelectionComplete;
+
         public Sprite powerUpIcon;
         [TextArea]
         public string powerUpName;
@@ -32,5 +34,10 @@ namespace MoreMountains.TopDownEngine
         public PowerUpType powerUpType;
 
         public abstract void Apply(Transform targetTransform);
+
+        protected void PowerUpSelectionCompleted()
+        {
+            OnPowerUpSelectionComplete?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

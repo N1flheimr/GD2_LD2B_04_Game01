@@ -17,6 +17,7 @@ namespace MoreMountains.TopDownEngine
             ProjectileWeapon projectileWeapon = playerHandleWeapon.CurrentWeapon.GetComponent<ProjectileWeapon>();
 
             MMObjectPooler pooledGameObject = projectileWeapon.ObjectPooler;
+            PowerUpSelectionCompleted();
         }
     }
 }

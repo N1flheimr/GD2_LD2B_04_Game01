@@ -19,6 +19,7 @@ namespace MoreMountains.TopDownEngine
                 return;
             }
             characterHandleWeapon.ChangeWeapon(newWeapon, newWeapon.WeaponName, false);
+            PowerUpSelectionCompleted();
             Debug.Log("Weapon Changed");
         }
     }

@@ -29,6 +29,7 @@ namespace MoreMountains.TopDownEngine
 
 
             OnMagazineIncreaseApplied?.Invoke(this, new WeaponModsAppliedEventArgs(amount));
+            PowerUpSelectionCompleted();
             Debug.Log("MagSize: " + currentWeapon.MagazineSize);
         }
     }

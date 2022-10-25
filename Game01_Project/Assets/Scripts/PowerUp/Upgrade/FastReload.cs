@@ -22,6 +22,7 @@ namespace MoreMountains.TopDownEngine
 
             currentWeapon.ReloadTime -= currentWeapon.ReloadTime * amountMult;
             OnFastReloadApplied?.Invoke(this, new WeaponModsAppliedEventArgs(amount));
+            PowerUpSelectionCompleted();
             Debug.Log("Speed: " + currentWeapon.ReloadTime);
         }
     }
