@@ -8,12 +8,22 @@ namespace MoreMountains.TopDownEngine
     {
         public PowerUpManagerUI powerUpManagerUI;
         public List<Projectile> projectileList;
+
+        public GameObject powerUpUIGameObject;
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
-                powerUpManagerUI.CreatePowerUpButtons();
-                Projectile[] projectileArray = FindObjectsOfType<Projectile>();
+                if (!powerUpManagerUI.isActiveAndEnabled)
+                {
+                    GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
+                    powerUpUIGameObject.SetActive(true);
+                }
+                else
+                {
+                    GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
+                    powerUpUIGameObject.SetActive(false);
+                }
             }
         }
     }

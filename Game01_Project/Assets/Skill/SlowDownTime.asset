@@ -17,12 +17,12 @@ MonoBehaviour:
     Unlimited: 0
     ConsumptionDuration: 0
     PauseOnEmptyDuration: 0
-    RefillDuration: 45
+    RefillDuration: 60
     CanInterruptRefill: 0
-    CooldownState: 3
-    CurrentDurationLeft: 28.122301
+    CooldownState: 0
+    CurrentDurationLeft: 0
   Mode: 0
-  oneTimeDuration: 12
+  oneTimeDuration: 10
   TimeScale: 0.5
   LerpTimeScale: 1
   LerpSpeed: 5

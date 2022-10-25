@@ -4971,7 +4971,7 @@ MonoBehaviour:
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 150
+  Speed: 325
   Acceleration: 200
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
@@ -5041,7 +5041,7 @@ MonoBehaviour:
     m_Bits: 3840
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 75
+  MinDamageCaused: 60
   MaxDamageCaused: 10
   TypedDamages: []
   DamageCausedKnockbackType: 1
