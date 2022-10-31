@@ -9,6 +9,10 @@ namespace MoreMountains.TopDownEngine
     {
         public static Test Instance { get; private set; }
 
+        public GameObject tankPrefab;
+        public GameObject tankGameObject;
+        public Transform enemySpawnPoint;
+
         public event EventHandler OnPowerUpSelectionStart;
         public PowerUpManagerUI powerUpManagerUI;
         public List<Projectile> projectileList;
@@ -34,6 +38,15 @@ namespace MoreMountains.TopDownEngine
                     GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
                     powerUpUIGameObject.SetActive(true);
                     OnPowerUpSelectionStart?.Invoke(this, EventArgs.Empty);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Y))
+            {
+                tankGameObject = GameObject.FindGameObjectWithTag("Enemy");
+                if (tankGameObject == null)
+                {
+                    Instantiate(tankPrefab, enemySpawnPoint.position, Quaternion.identity);
                 }
             }
         }

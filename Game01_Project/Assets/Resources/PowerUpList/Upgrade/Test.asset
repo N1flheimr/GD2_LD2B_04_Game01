@@ -15,5 +15,5 @@ MonoBehaviour:
   powerUpIcon: {fileID: 21300014, guid: 358b5d9f23bc9413e87c9948acc67ee1, type: 3}
   powerUpName: Damage
   description: Damage
-  powerUpType: 0
+  powerUpType: 3
   amount: 15

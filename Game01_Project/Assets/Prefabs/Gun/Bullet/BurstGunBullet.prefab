@@ -4903,6 +4903,7 @@ GameObject:
   - component: {fileID: 54994276034465240}
   - component: {fileID: 114352293955758238}
   - component: {fileID: 114675000447675420}
+  - component: {fileID: 8943386216059233752}
   m_Layer: 18
   m_Name: BurstGunBullet
   m_TagString: Untagged
@@ -4945,19 +4946,7 @@ MonoBehaviour:
   BoundsBasedOn: 0
   ExecuteOnEnable:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
@@ -5018,7 +5007,7 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
-  DestroyOnDeath: 0
+  DestroyOnDeath: 1
   DelayBeforeDestruction: 0
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
@@ -5056,7 +5045,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   TriggerFilter: 195
   MinDamageCaused: 7
-  MaxDamageCaused: 19
+  MaxDamageCaused: 13
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
@@ -5066,7 +5055,7 @@ MonoBehaviour:
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
   DamageOverTimeInterruptible: 1
-  RepeatedDamageType: {fileID: 0}
+  RepeatedDamageType: {fileID: 11400000, guid: 34cb252e231d5bf46b20591e9e9b63f7, type: 2}
   DamageTakenEveryTime: 1
   DamageTakenDamageable: 0
   DamageTakenNonDamageable: 0
@@ -5128,7 +5117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 12032
+    m_Bits: 3840
   SkinWidth: 0.1
   RepositionRigidbody: 1
   RepositionRigidbodyLayerMask:
@@ -5148,6 +5137,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PushPower: 15
   PositionOffset: 0
+--- !u!114 &8943386216059233752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854097648223014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f1c90e6ffbbc24a825e7b60166f017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundsBasedOn: 0
+  ExecuteOnEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8943386216059233752}
+        m_TargetAssemblyTypeName: MoreMountains.TopDownEngine.DamagePayload, Assembly-CSharp
+        m_MethodName: ApplyModifier
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExecuteOnDisable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8943386216059233752}
+        m_TargetAssemblyTypeName: MoreMountains.TopDownEngine.DamagePayload, Assembly-CSharp
+        m_MethodName: ResetModifier
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  LifeTime: 5
+  bullet: {fileID: 0}
+  damageOnTouch: {fileID: 0}
+  originalMinDamage: 0
+  originalMaxDamage: 0
 --- !u!1 &2970920551882278989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,7 +5459,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -10475,6 +10511,16 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3036081855788999947, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278317191066349497, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4392642776950485622, guid: 8c6c4b46f25c8674c836660af8f3582d,
         type: 3}
       propertyPath: lengthInSec
@@ -10484,6 +10530,16 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028473799459125803, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015340367056428161, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6702227914809282779, guid: 8c6c4b46f25c8674c836660af8f3582d,
         type: 3}
@@ -10555,6 +10611,11 @@ PrefabInstance:
       propertyPath: ShapeModule.angle
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8513209184108671709, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8958866738862430482, guid: 8c6c4b46f25c8674c836660af8f3582d,
         type: 3}
       propertyPath: looping
@@ -10564,6 +10625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002853466149593111, guid: 8c6c4b46f25c8674c836660af8f3582d,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c6c4b46f25c8674c836660af8f3582d, type: 3}
