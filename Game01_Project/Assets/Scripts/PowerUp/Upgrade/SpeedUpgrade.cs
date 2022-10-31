@@ -13,6 +13,7 @@ namespace MoreMountains.TopDownEngine
             CharacterMovement characterMovement = targetTransform.GetComponent<CharacterMovement>();
             float speedIncreaseAmount = characterMovement.MovementSpeed * (amount / 100);
             characterMovement.MovementSpeed += speedIncreaseAmount;
+            PowerUpSelectionCompleted();
             Debug.Log("walk speed: " + characterMovement.MovementSpeed);
         }
     }

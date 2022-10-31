@@ -4896,13 +4896,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4585949775055698}
   - component: {fileID: 114564512680273234}
-  - component: {fileID: 114520861229986060}
   - component: {fileID: 114102311241470466}
   - component: {fileID: 114692968763625280}
   - component: {fileID: 65720217773407688}
   - component: {fileID: 54994276034465240}
   - component: {fileID: 114352293955758238}
   - component: {fileID: 114675000447675420}
+  - component: {fileID: 5130997859876136074}
   m_Layer: 18
   m_Name: HandgunBullet
   m_TagString: Untagged
@@ -4950,37 +4950,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   LifeTime: 5
---- !u!114 &114520861229986060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854097648223014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1a732e2aa364c569bbb79498af8c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BoundsBasedOn: 0
-  ExecuteOnEnable:
-    m_PersistentCalls:
-      m_Calls: []
-  ExecuteOnDisable:
-    m_PersistentCalls:
-      m_Calls: []
-  LifeTime: 2
-  FaceDirection: 1
-  FaceMovement: 0
-  MovementVector: 0
-  Speed: 600
-  Acceleration: 0
-  Direction: {x: -1, y: 0, z: 0}
-  DirectionCanBeChangedBySpawner: 1
-  FlipValue: {x: -1, y: 1, z: 1}
-  ProjectileIsFacingRight: 1
-  InitialInvulnerabilityDuration: 0
-  DamageOwner: 0
 --- !u!114 &114102311241470466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4999,15 +4968,15 @@ MonoBehaviour:
   InitialHealth: 1
   MaximumHealth: 1
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 0
+  ImmuneToDamage: 1
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
-  DestroyOnDeath: 0
-  DelayBeforeDestruction: 0
+  DestroyOnDeath: 1
+  DelayBeforeDestruction: 1
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -5040,15 +5009,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 12032
+    m_Bits: 8704
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 7
-  MaxDamageCaused: 9
+  MinDamageCaused: 10
+  MaxDamageCaused: 10
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 2, y: 2, z: 0}
+  DamageCausedKnockbackForce: {x: 10, y: 2, z: 0}
   InvincibilityDuration: 0.1
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
@@ -5056,13 +5025,13 @@ MonoBehaviour:
   DamageOverTimeInterruptible: 1
   RepeatedDamageType: {fileID: 0}
   DamageTakenEveryTime: 1
-  DamageTakenDamageable: 0
-  DamageTakenNonDamageable: 0
+  DamageTakenDamageable: 1
+  DamageTakenNonDamageable: 1
   DamageTakenKnockbackType: 0
   DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
   DamageTakenInvincibilityDuration: 0.5
-  HitDamageableFeedback: {fileID: 3006034487020438410}
-  HitNonDamageableFeedback: {fileID: 4719321639135565252}
+  HitDamageableFeedback: {fileID: 0}
+  HitNonDamageableFeedback: {fileID: 0}
   HitAnythingFeedback: {fileID: 0}
   HitDamageableEvent:
     m_PersistentCalls:
@@ -5098,7 +5067,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5136,6 +5105,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PushPower: 15
   PositionOffset: 0
+--- !u!114 &5130997859876136074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854097648223014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1a732e2aa364c569bbb79498af8c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundsBasedOn: 0
+  ExecuteOnEnable:
+    m_PersistentCalls:
+      m_Calls: []
+  ExecuteOnDisable:
+    m_PersistentCalls:
+      m_Calls: []
+  LifeTime: 5
+  FaceDirection: 1
+  FaceMovement: 0
+  MovementVector: 0
+  Speed: 600
+  Acceleration: 0
+  Direction: {x: -1, y: 0, z: 0}
+  DirectionCanBeChangedBySpawner: 1
+  FlipValue: {x: -1, y: 1, z: 1}
+  ProjectileIsFacingRight: 1
+  InitialInvulnerabilityDuration: 0
+  DamageOwner: 0
 --- !u!1 &2970920551882278989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,7 +5410,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

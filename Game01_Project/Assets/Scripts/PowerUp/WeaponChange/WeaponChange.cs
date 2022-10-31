@@ -1,3 +1,4 @@
+using MoreMountains.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ namespace MoreMountains.TopDownEngine
                 return;
             }
             characterHandleWeapon.ChangeWeapon(newWeapon, newWeapon.WeaponName, false);
-
+            PowerUpSelectionCompleted();
             Debug.Log("Weapon Changed");
         }
     }

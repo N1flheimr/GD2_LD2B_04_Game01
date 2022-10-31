@@ -19,6 +19,7 @@ namespace MoreMountains.TopDownEngine
             playerHealth.UpdateHealthBar(true);
             Debug.Log("Max Health upgraded. Current Max HP: " + playerHealth.MaximumHealth);
             Debug.Log("Max Health upgraded. Current HP: " + playerHealth.CurrentHealth);
+            PowerUpSelectionCompleted();
         }
     }
 }

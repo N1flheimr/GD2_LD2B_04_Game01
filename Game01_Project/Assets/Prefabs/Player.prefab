@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086474807244638009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7086705365592229080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,8 +75,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.099430345, g: 0.9245283, b: 0.8250327, a: 1}
-  m_Intensity: 3
-  m_Range: 25
+  m_Intensity: 4
+  m_Range: 6.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -310,11 +310,12 @@ GameObject:
   - component: {fileID: 7848730206413165002}
   - component: {fileID: 7848730206413165007}
   - component: {fileID: 7848730206413165006}
-  - component: {fileID: 7848730206413164992}
   - component: {fileID: 7848730206413164995}
   - component: {fileID: 7848730206413164994}
   - component: {fileID: 7848730206413164997}
   - component: {fileID: 8155304315305965349}
+  - component: {fileID: 1669877577}
+  - component: {fileID: 1669877589}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -356,7 +357,7 @@ MonoBehaviour:
   PlayerID: Player1
   CharacterAnimator: {fileID: 0}
   UseDefaultMecanim: 1
-  RunAnimatorSanityChecks: 0
+  RunAnimatorSanityChecks: 1
   DisableAnimatorLogs: 1
   CharacterModel: {fileID: 7848730205908775437}
   CharacterHealth: {fileID: 7848730206413164997}
@@ -612,37 +613,15 @@ MonoBehaviour:
   InputAuthorized: 1
   AnalogInput: 0
   ScriptDrivenInput: 0
-  WalkSpeed: 9
+  WalkSpeed: 7
   ShouldSetMovement: 1
   IdleThreshold: 0.05
-  Acceleration: 12
-  Deceleration: 15
-  InterpolateMovementSpeed: 0
+  Acceleration: 9
+  Deceleration: 11
+  InterpolateMovementSpeed: 1
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
---- !u!114 &7848730206413164992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7848730206413164996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87ffdd7d8febb24b817b1d3d350bef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  PreventJumpInButtonActivatedZone: 1
-  ButtonActivatedZone: {fileID: 0}
 --- !u!114 &7848730206413164995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,9 +662,9 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  Mode: 1
+  Mode: 0
   TimeScale: 0.5
-  OneTimeDuration: 1
+  OneTimeDuration: 6
   LerpTimeScale: 1
   LerpSpeed: 5
   Cooldown:
@@ -708,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01754710d9f92ec4d9a21b81f5682667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Model: {fileID: 7848730205908775437}
+  Model: {fileID: 7848730206413164996}
   CurrentHealth: 100
   Invulnerable: 0
   InitialHealth: 100
@@ -720,7 +699,7 @@ MonoBehaviour:
   PreventTakeSelfDamage: 0
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
-  KnockbackForceMultiplier: 1
+  KnockbackForceMultiplier: 2
   DestroyOnDeath: 1
   DelayBeforeDestruction: 0
   PointsWhenDestroyed: 0
@@ -778,3 +757,46 @@ MonoBehaviour:
   MaximumBufferDuration: 0.25
   RequiresPerfectTile: 0
   CurrentWeapon: {fileID: 0}
+--- !u!114 &1669877577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7848730206413164996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb535781414c1d42a12fb0955acc89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 0
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  currentSkill: {fileID: 0}
+  cooldown:
+    Unlimited: 0
+    ConsumptionDuration: 0
+    PauseOnEmptyDuration: 1
+    RefillDuration: 1
+    CanInterruptRefill: 1
+    CooldownState: 0
+    CurrentDurationLeft: 0
+--- !u!114 &1669877589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7848730206413164996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320ec3dcd1a037e46b8ee901b0be017c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponModsArray: 
+  multAmountArray: []

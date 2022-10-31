@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
+using MoreMountains.Feedbacks;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -13,6 +14,7 @@ namespace MoreMountains.TopDownEngine
         /// the cooldown for this ability
         [Tooltip("the cooldown for this ability")]
         public MMCooldown cooldown;
+
 
         /// <summary>
         /// Here you should initialize our parameters
@@ -29,20 +31,27 @@ namespace MoreMountains.TopDownEngine
         public override void ProcessAbility()
         {
             base.ProcessAbility();
+            cooldown.Update();
         }
 
-        protected virtual void ActiveSkill()
+        protected virtual void ActivateSkill()
         {
+            cooldown = currentSkill.cooldown;
+
             if (cooldown.Ready())
             {
-                Debug.Log("Skill pressed");
+                PlayAbilityStartFeedbacks();
+
+                currentSkill.Activate(cooldown);
+                cooldown.Start();
             }
         }
 
         protected virtual void StopSkill()
         {
-            Debug.Log("Skill Stop");
-            cooldown.Stop();
+            StopStartFeedbacks();
+            PlayAbilityStopFeedbacks();
+            currentSkill.Stop(cooldown);
         }
 
         /// <summary>
@@ -55,9 +64,10 @@ namespace MoreMountains.TopDownEngine
             {
                 return;
             }
+
             if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
             {
-                ActiveSkill();
+                ActivateSkill();
             }
             if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonUp)
             {
@@ -67,10 +77,9 @@ namespace MoreMountains.TopDownEngine
 
         public void ChangeSkill(Skill skill)
         {
-            if (currentSkill != null)
-            {
-                currentSkill = skill;
-            }
+            currentSkill = skill;
+            cooldown = currentSkill.cooldown;
+            cooldown.CurrentDurationLeft = currentSkill.cooldown.RefillDuration;
         }
     }
 }

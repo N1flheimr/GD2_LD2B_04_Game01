@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BurstMachineGun
   m_EditorClassIdentifier: 
   powerUpIcon: {fileID: 21300008, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
-  powerUpName: HJSH-18 Masamune
+  powerUpName: "HJSH-18 \nMasamune"
   description: 'Type: Burst Fire
 
     Damage: 10-12

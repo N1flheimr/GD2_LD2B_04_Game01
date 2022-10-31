@@ -20202,9 +20202,9 @@ MonoBehaviour:
   WeaponCurrentlyActive: 1
   TriggerMode: 0
   DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 1
-  TimeBetweenUses: 0.1
-  TimeBetweenUsesReleaseInterruption: 1
+  DelayBeforeUseReleaseInterruption: 0
+  TimeBetweenUses: 0.38
+  TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
@@ -20212,12 +20212,12 @@ MonoBehaviour:
   MagazineSize: 6
   AutoReload: 1
   NoInputReload: 1
-  ReloadTime: 1
+  ReloadTime: 1.5
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
-  WeaponAttachmentOffset: {x: 0.1, y: 0, z: -0.2}
+  WeaponAttachmentOffset: {x: 0.1, y: 0, z: 0.5}
   FlipWeaponOnCharacterFlip: 1
   RightFacingFlipValue: {x: 1, y: 1, z: 1}
   LeftFacingFlipValue: {x: -1, y: 1, z: 1}
@@ -20254,15 +20254,15 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 0, y: 0.16, z: 0.57}
+  ProjectileSpawnOffset: {x: 0, y: 0.5, z: 1.6}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
-  ProjectilesPerShot: 3
+  ProjectilesPerShot: 5
   SpawnTransforms: []
   SpawnTransformsMode: 1
-  Spread: {x: 5, y: 5, z: 5}
+  Spread: {x: 25, y: 25, z: 15}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 0.45940518, y: 0.16, z: 0.33741203}
+  SpawnPosition: {x: 1.2895584, y: 0.5, z: 0.94712156}
   SpawnFeedbacks: []
   TestShootButton: 0
 --- !u!95 &95889161802339608
@@ -20299,7 +20299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 3
   RotationMode: 0
-  WeaponRotationSpeed: 10
+  WeaponRotationSpeed: 25
   MinimumAngle: -180
   MaximumAngle: 180
   MinimumMagnitude: 0.2
@@ -20313,7 +20313,7 @@ MonoBehaviour:
   MouseDeadZoneRadius: 2.5
   DisplayReticle: 1
   MoveCameraTargetTowardsReticle: 1
-  CameraTargetOffset: 0.3
+  CameraTargetOffset: 0.4
   CameraTargetMaxDistance: 5
   CameraTargetSpeed: 5
   Unrestricted3DAim: 0
@@ -20705,6 +20705,16 @@ MonoBehaviour:
   DebugActive: 0
   m_ImpulseDefinition:
     m_ImpulseChannel: 1
+    m_ImpulseShape: 0
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 3
+    m_DissipationRate: 0
     m_RawSignal: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
