@@ -9,6 +9,8 @@ namespace MoreMountains.TopDownEngine
         DamageUpgrade,
         FastReload,
         MagazineIncrease,
+        CriticalChance,
+        CriticalDamage,
         lastWeaponMod
     }
     public class WeaponModifier : MonoBehaviour
@@ -32,6 +34,8 @@ namespace MoreMountains.TopDownEngine
             FastReload.OnFastReloadApplied += FastReload_OnFastReloadApplied;
             MagazineIncrease.OnMagazineIncreaseApplied += MagazineIncrease_OnMagazineIncreaseApplied;
             WeaponDamageUpgrade.OnDamageUpgradeApplied += WeaponDamageUpgrade_OnDamageUpgradeApplied;
+            CriticalChance.OnCriticalChanceApplied += CriticalChance_OnCriticalChanceApplied;
+            CritDamageIncrease.OnCriticalDamageApplied += CritDamageIncrease_OnCriticalDamageApplied;
         }
 
         private void CharacterHandleWeapon_OnWeaponChanged()
@@ -87,6 +91,17 @@ namespace MoreMountains.TopDownEngine
             weaponModsArray[(int)eWeaponModifierType.DamageUpgrade] = true;
 
             Debug.Log(multAmountArray[(int)eWeaponModifierType.DamageUpgrade]);
+        }
+
+        private void CriticalChance_OnCriticalChanceApplied(object sender, WeaponModsAppliedEventArgs args)
+        {
+            multAmountArray[(int)eWeaponModifierType.CriticalChance] = args.multiplier;
+            weaponModsArray[(int)eWeaponModifierType.CriticalChance] = true;
+        }
+        private void CritDamageIncrease_OnCriticalDamageApplied(object sender, WeaponModsAppliedEventArgs args)
+        {
+            multAmountArray[(int)eWeaponModifierType.CriticalDamage] = args.multiplier;
+            weaponModsArray[(int)eWeaponModifierType.CriticalDamage] = true;
         }
 
         public bool GetWeaponMods(eWeaponModifierType weaponModifierType)

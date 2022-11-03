@@ -4903,6 +4903,7 @@ GameObject:
   - component: {fileID: 114352293955758238}
   - component: {fileID: 114675000447675420}
   - component: {fileID: 5130997859876136074}
+  - component: {fileID: 7102125674835834427}
   m_Layer: 18
   m_Name: HandgunBullet
   m_TagString: Untagged
@@ -4968,7 +4969,7 @@ MonoBehaviour:
   InitialHealth: 1
   MaximumHealth: 1
   ResetHealthOnEnable: 1
-  ImmuneToDamage: 1
+  ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
   FeedbackIsProportionalToDamage: 0
   PreventTakeSelfDamage: 0
@@ -5009,11 +5010,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 8704
+    m_Bits: 11008
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 9
+  MaxDamageCaused: 11
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
@@ -5085,7 +5086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstaclesLayerMask:
     serializedVersion: 2
-    m_Bits: 12032
+    m_Bits: 2816
   SkinWidth: 0.1
   RepositionRigidbody: 1
   RepositionRigidbodyLayerMask:
@@ -5128,7 +5129,7 @@ MonoBehaviour:
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 600
+  Speed: 700
   Acceleration: 0
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
@@ -5136,6 +5137,24 @@ MonoBehaviour:
   ProjectileIsFacingRight: 1
   InitialInvulnerabilityDuration: 0
   DamageOwner: 0
+--- !u!114 &7102125674835834427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854097648223014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f1c90e6ffbbc24a825e7b60166f017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  damageOnTouch: {fileID: 0}
+  originalMinDamage: 0
+  originalMaxDamage: 0
+  critDamageMult: 1.5
+  critChance: 0
 --- !u!1 &2970920551882278989
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 490af02405a1ed04e893f2904c6b6cf5, type: 3}
-  m_Name: SpeedUpgrade
+  m_Script: {fileID: 11500000, guid: 3506722abcd0aed4da8f3accd96b641f, type: 3}
+  m_Name: DamageUpgrade
   m_EditorClassIdentifier: 
-  powerUpIcon: {fileID: 21300000, guid: 70b9d26fc73f9d145a33c8421560e371, type: 3}
-  powerUpName: Lynx Paws
-  description: Increase Movement Speed by 30%
-  powerUpType: 0
-  amount: 30
+  powerUpIcon: {fileID: 21300014, guid: 358b5d9f23bc9413e87c9948acc67ee1, type: 3}
+  powerUpName: Crunch
+  description: Increases Damage by 15%
+  powerUpType: 3
+  amount: 15

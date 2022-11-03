@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
 using System.Collections.Generic;
@@ -216,9 +217,10 @@ namespace MoreMountains.TopDownEngine
         /// Gets input and triggers methods based on what's been pressed
         /// </summary>
         protected override void HandleInput()
-        {
+        {    
             if (!AbilityAuthorized
-                || (_condition.CurrentState != CharacterStates.CharacterConditions.Normal))
+                || (_condition.CurrentState != CharacterStates.CharacterConditions.Normal)
+                || IsMouseOverUI())
             {
                 return;
             }
@@ -635,6 +637,11 @@ namespace MoreMountains.TopDownEngine
         {
             base.OnRespawn();
             Setup();
+        }
+
+        private bool IsMouseOverUI()
+        {
+            return EventSystem.current.IsPointerOverGameObject();
         }
     }
 }

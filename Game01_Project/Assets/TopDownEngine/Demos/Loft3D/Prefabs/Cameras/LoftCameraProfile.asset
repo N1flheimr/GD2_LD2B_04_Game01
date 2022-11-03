@@ -38,13 +38,13 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 28
+    value: 100
   aperture:
     overrideState: 1
-    value: 2
+    value: 0.1
   focalLength:
     overrideState: 1
-    value: 180
+    value: 1
   kernelSize:
     overrideState: 1
     value: 1
@@ -65,22 +65,22 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   intensity:
-    overrideState: 0
+    overrideState: 1
     value: 0
   intensityX:
-    overrideState: 0
+    overrideState: 1
     value: 1
   intensityY:
-    overrideState: 0
+    overrideState: 1
     value: 1
   centerX:
-    overrideState: 0
+    overrideState: 1
     value: 0
   centerY:
-    overrideState: 0
+    overrideState: 1
     value: 0
   scale:
-    overrideState: 0
+    overrideState: 1
     value: 1
 --- !u!114 &114516942106246926
 MonoBehaviour:
@@ -100,10 +100,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.63
+    value: 0.5
   threshold:
     overrideState: 1
-    value: 1.04
+    value: 1
   softKnee:
     overrideState: 1
     value: 0.5
@@ -127,7 +127,7 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0
 --- !u!114 &114731480079238622
 MonoBehaviour:
@@ -156,15 +156,15 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.407
+    value: 0.5
   smoothness:
     overrideState: 1
-    value: 0.254
+    value: 0.5
   roundness:
     overrideState: 1
-    value: 0.958
+    value: 0.89
   rounded:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mask:
     overrideState: 1
