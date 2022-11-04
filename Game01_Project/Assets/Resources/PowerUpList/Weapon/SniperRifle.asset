@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpIcon: {fileID: 21300010, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: O'Five
-  description: 'Type: Single Shot
+  description: 'Bullet Type: Single Piercing
 
-    Damage: 50
+    Damage: 75-95
 
-    Magazine: 3'
+    Magazine: 3
+
+    Heal
+    25 HP'
   powerUpType: 1
   newWeapon: {fileID: 114105760503853334, guid: 0f4850e1cc1460b48b8c7acf5cf83fa4,
     type: 3}
+  healAmount: 25

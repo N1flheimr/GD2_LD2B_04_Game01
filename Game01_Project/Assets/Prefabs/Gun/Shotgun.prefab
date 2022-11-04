@@ -20181,8 +20181,8 @@ Transform:
   m_Children:
   - {fileID: 4599272732225086}
   - {fileID: 7362157656728655814}
-  - {fileID: 8539679815532647777}
   - {fileID: 6081608060568828441}
+  - {fileID: 4286680684652414092}
   - {fileID: 4293410691515634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -20201,10 +20201,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponName: Guts Shotgun
   WeaponCurrentlyActive: 1
-  TriggerMode: 0
+  TriggerMode: 1
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.38
+  TimeBetweenUses: 0.4
   TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
@@ -20212,7 +20212,7 @@ MonoBehaviour:
   MagazineBased: 1
   MagazineSize: 6
   AutoReload: 1
-  NoInputReload: 1
+  NoInputReload: 0
   ReloadTime: 1.5
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
@@ -20250,7 +20250,7 @@ MonoBehaviour:
   WeaponUsedMMFeedback: {fileID: 4924542972972247367}
   WeaponUsedMMFeedbackAlt: {fileID: 0}
   WeaponStopMMFeedback: {fileID: 0}
-  WeaponReloadMMFeedback: {fileID: 4776121418249524889}
+  WeaponReloadMMFeedback: {fileID: 4487833912311160538}
   WeaponReloadNeededMMFeedback: {fileID: 5711712959867855545}
   InitializeOnStart: 1
   Interruptable: 0
@@ -20530,6 +20530,7 @@ GameObject:
   - component: {fileID: 6476333407632257933}
   - component: {fileID: 1679956290325757220}
   - component: {fileID: 4487538477943196198}
+  - component: {fileID: 7238290270644340818}
   m_Layer: 0
   m_Name: ShootFeedback
   m_TagString: Untagged
@@ -20573,6 +20574,7 @@ MonoBehaviour:
   - {fileID: 6476333407632257933}
   - {fileID: 1679956290325757220}
   - {fileID: 4487538477943196198}
+  - {fileID: 7238290270644340818}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -21268,6 +21270,51 @@ MonoBehaviour:
   RemapShadowStrengthZero: 0
   RemapShadowStrengthOne: 1
   InstantShadowStrength: 0
+--- !u!114 &7238290270644340818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257931361012291085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fe7e41857f44348b52714b3238715c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Camera Shake
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  RepeatUntilStopped: 0
+  Channel: 0
+  CameraShakeProperties:
+    Duration: 0.1
+    Amplitude: 0.6
+    Frequency: 100
+    AmplitudeX: 0
+    AmplitudeY: 0
+    AmplitudeZ: 0
 --- !u!1 &2933097073358721773
 GameObject:
   m_ObjectHideFlags: 0
@@ -26306,7 +26353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4084743482565372}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5711712959867855545
 MonoBehaviour:
@@ -26405,7 +26452,7 @@ MonoBehaviour:
   MinPitch: 1
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
---- !u!1 &6724549569734267445
+--- !u!1 &7850926924472372509
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26413,9 +26460,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8539679815532647777}
-  - component: {fileID: 4776121418249524889}
-  - component: {fileID: 1460414365435571796}
+  - component: {fileID: 4286680684652414092}
+  - component: {fileID: 4487833912311160538}
+  - component: {fileID: 4297574672593860281}
+  - component: {fileID: 791668544894321064}
   m_Layer: 0
   m_Name: WeaponReloadMMFeedback
   m_TagString: Untagged
@@ -26423,35 +26471,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8539679815532647777
+--- !u!4 &4286680684652414092
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6724549569734267445}
+  m_GameObject: {fileID: 7850926924472372509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3444152, y: -5.0252767, z: 9.000002}
+  m_LocalPosition: {x: 2.3444154, y: -5.0252767, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4084743482565372}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4776121418249524889
+--- !u!114 &4487833912311160538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6724549569734267445}
+  m_GameObject: {fileID: 7850926924472372509}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Feedbacks:
-  - {fileID: 1460414365435571796}
+  - {fileID: 4297574672593860281}
+  - {fileID: 791668544894321064}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -26488,13 +26537,13 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
---- !u!114 &1460414365435571796
+--- !u!114 &4297574672593860281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6724549569734267445}
+  m_GameObject: {fileID: 7850926924472372509}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
@@ -26530,11 +26579,48 @@ MonoBehaviour:
   TestStopButton: 0
   PlayMethod: 0
   PoolSize: 10
-  MinVolume: 1
-  MaxVolume: 1
-  MinPitch: 1
+  MinVolume: 0.5
+  MaxVolume: 0.5
+  MinPitch: 0.9
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
+--- !u!114 &791668544894321064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850926924472372509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c979275ebf7395478dc6450bee193ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: ReloadEvent
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    ExcludeFromHoldingPauses: 0
+    ContributeToTotalDuration: 1
+    InitialDelay: 0
+    CooldownDuration: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 0
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  MMGameEventName: Reload
 --- !u!1 &8195576600807036745
 GameObject:
   m_ObjectHideFlags: 0

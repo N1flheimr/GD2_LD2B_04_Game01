@@ -10,7 +10,8 @@ namespace MoreMountains.TopDownEngine
 	public enum MMCharacterEventTypes
 	{
 		ButtonActivation,
-		Jump
+		Jump,
+		Reload
 	}
 
 	/// <summary>

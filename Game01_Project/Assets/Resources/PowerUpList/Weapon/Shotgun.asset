@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpIcon: {fileID: 21300000, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: Guts Shotgun
-  description: 'Type: Spread Shoot
+  description: 'Bullet Type: Spread
 
-    Damage: 11-15/Bullet
+    Damage: 24-32/Bullet
 
-    Magazine: 6'
+    Magazine: 6
+
+    Heal
+    25 HP'
   powerUpType: 1
   newWeapon: {fileID: 114922138254092764, guid: 06b31264add18314e88ceddf047938b4,
     type: 3}
+  healAmount: 25

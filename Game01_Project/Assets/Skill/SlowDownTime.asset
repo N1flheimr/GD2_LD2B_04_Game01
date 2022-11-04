@@ -19,10 +19,10 @@ MonoBehaviour:
     PauseOnEmptyDuration: 0
     RefillDuration: 60
     CanInterruptRefill: 0
-    CooldownState: 0
-    CurrentDurationLeft: 0
+    CooldownState: 3
+    CurrentDurationLeft: 2.8423197
   Mode: 0
-  oneTimeDuration: 10
-  TimeScale: 0.5
+  oneTimeDuration: 12
+  TimeScale: 0.35
   LerpTimeScale: 1
-  LerpSpeed: 5
+  LerpSpeed: 3

@@ -5073,12 +5073,12 @@ MonoBehaviour:
     m_Bits: 12032
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 12
-  MaxDamageCaused: 16
+  MinDamageCaused: 24
+  MaxDamageCaused: 32
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 10, y: 2, z: 0}
+  DamageCausedKnockbackForce: {x: 2, y: 2, z: 0}
   InvincibilityDuration: 0.1
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3

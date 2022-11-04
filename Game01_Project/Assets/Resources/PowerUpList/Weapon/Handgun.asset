@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpIcon: {fileID: 21300002, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: HJKE-11
-  description: 'Type: Single Shot
+  description: 'Bullet Type: Single
 
-    Damage: 9-11
+    Damage: 18-24
 
     Magazine: 30
 
-'
+    Heal
+    25 HP'
   powerUpType: 1
   newWeapon: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
     type: 3}
+  healAmount: 25

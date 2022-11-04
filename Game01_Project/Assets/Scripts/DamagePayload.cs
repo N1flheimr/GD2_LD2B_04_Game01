@@ -13,7 +13,7 @@ namespace MoreMountains.TopDownEngine
         private int maxDamage;
         [SerializeField] private int originalMinDamage;
         [SerializeField] private int originalMaxDamage;
-        [SerializeField] private float critDamageMult = 1.5f;
+        [SerializeField] private float critDamageMult = 1.75f;
         [SerializeField] private float critChance = 4f;
         private bool hasInitialized;
 
@@ -31,13 +31,13 @@ namespace MoreMountains.TopDownEngine
 
             ApplyCritical();
 
-            bullet.SetDamage(minDamage, maxDamage);
+            bullet.SetDamage(Mathf.CeilToInt(minDamage), Mathf.CeilToInt(maxDamage));
             Debug.Log("ModifierApplied");
         }
 
         public void ResetModifier()
         {
-            bullet.SetDamage(originalMinDamage, originalMaxDamage);
+            bullet.SetDamage(Mathf.CeilToInt(originalMinDamage), Mathf.CeilToInt(originalMaxDamage));
         }
 
         private void OnEnable()
