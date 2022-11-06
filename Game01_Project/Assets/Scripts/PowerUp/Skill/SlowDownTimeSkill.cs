@@ -10,6 +10,8 @@ namespace MoreMountains.TopDownEngine
     [CreateAssetMenu(menuName = "PowerUpSystem/SlowDownTime")]
     public class SlowDownTimeSkill : Skill
     {
+        public static event EventHandler<WeaponModsAppliedEventArgs> OnSlowDownTimeSkillActive;
+        public static event EventHandler OnSlowDownTimeSkillStop;
 
         [Tooltip("the time scale to switch to when the time control button gets pressed")]
         public float TimeScale;
@@ -21,6 +23,10 @@ namespace MoreMountains.TopDownEngine
         [Tooltip("the speed at which to lerp the timescale")]
         public float LerpSpeed;
 
+        public float damageIncreaseAmount;
+        public float critDamageIncreaseAmount;
+        public float critChanceIncreaseAmount;
+
         public override void Activate(MMCooldown cooldown)
         {
             CharacterMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
@@ -28,12 +34,19 @@ namespace MoreMountains.TopDownEngine
             playerMovement.ApplyMovementMultiplier((playerMovement.MovementSpeedMultiplier / TimeScale), oneTimeDuration * TimeScale);
 
             MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, TimeScale, oneTimeDuration, LerpTimeScale, LerpSpeed, false);
+
+            isActive = true;
             cooldown.Start();
+
+            OnSlowDownTimeSkillActive?.Invoke(
+                this, new WeaponModsAppliedEventArgs(damageIncreaseAmount, critDamageIncreaseAmount, critChanceIncreaseAmount));
         }
 
         public override void Stop(MMCooldown cooldown)
         {
             cooldown.Stop();
+            isActive = false;
+            OnSlowDownTimeSkillStop?.Invoke(this, EventArgs.Empty);
             Debug.Log("Skill Stop");
         }
     }

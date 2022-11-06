@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
+using MoreMountains.Feedbacks;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -9,12 +10,17 @@ namespace MoreMountains.TopDownEngine
     {
         [SerializeField] private Projectile bullet;
         [SerializeField] private DamageOnTouch damageOnTouch;
-        private int minDamage;
-        private int maxDamage;
-        [SerializeField] private int originalMinDamage;
-        [SerializeField] private int originalMaxDamage;
+
+        private float minDamage;
+        private float maxDamage;
+        private float originalMinDamage;
+        private float originalMaxDamage;
+
         [SerializeField] private float critDamageMult = 1.75f;
         [SerializeField] private float critChance = 4f;
+
+        [SerializeField] private Skill currentPlayerSkill;
+
         private bool hasInitialized;
 
         public void ApplyModifier()
@@ -24,10 +30,7 @@ namespace MoreMountains.TopDownEngine
                 Initialize();
             }
 
-            minDamage =
-                 (int)damageOnTouch.MinDamageCaused + Mathf.CeilToInt(damageOnTouch.MinDamageCaused * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.DamageUpgrade));
-            maxDamage =
-                 (int)damageOnTouch.MaxDamageCaused + Mathf.CeilToInt(damageOnTouch.MaxDamageCaused * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.DamageUpgrade));
+            ApplyDamageMods();
 
             ApplyCritical();
 
@@ -43,6 +46,7 @@ namespace MoreMountains.TopDownEngine
         private void OnEnable()
         {
             ApplyModifier();
+            Debug.Log("Bullet Damage: " + minDamage);
         }
 
         private void OnDisable()
@@ -61,6 +65,11 @@ namespace MoreMountains.TopDownEngine
                 Debug.Log("CritChance: " + critChance);
             }
 
+            if (WeaponModifier.Instance.GetWeaponMods(eWeaponModifierType.SlowDownCritChance))
+            {
+                critChance += WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.SlowDownCritChance) * 100f;
+            }
+
             float critDamageMult = this.critDamageMult;
             if (randValue <= critChance)
             {
@@ -69,9 +78,35 @@ namespace MoreMountains.TopDownEngine
                     critDamageMult += WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.CriticalDamage);
                     Debug.Log("CritDamage: " + critDamageMult);
                 }
+
+                if (WeaponModifier.Instance.GetWeaponMods(eWeaponModifierType.SlowDownCritDamage))
+                {
+                    critDamageMult += WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.SlowDownCritDamage);
+                }
+
                 minDamage = Mathf.CeilToInt(minDamage * critDamageMult);
                 maxDamage = Mathf.CeilToInt(maxDamage * critDamageMult);
                 Debug.Log("CritMinDmg: " + minDamage);
+            }
+            Debug.Log("CritChance: " + critChance);
+            Debug.Log("CritDamage: " + critDamageMult);
+        }
+
+        private void ApplyDamageMods()
+        {
+            minDamage = damageOnTouch.MinDamageCaused;
+            maxDamage = damageOnTouch.MaxDamageCaused;
+
+            if (WeaponModifier.Instance.GetWeaponMods(eWeaponModifierType.DamageUpgrade))
+            {
+                minDamage += (minDamage * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.DamageUpgrade));
+                maxDamage += (maxDamage * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.DamageUpgrade));
+            }
+
+            if (WeaponModifier.Instance.GetWeaponMods(eWeaponModifierType.SlowDownDamage))
+            {
+                minDamage += minDamage * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.SlowDownDamage);
+                maxDamage += maxDamage * WeaponModifier.Instance.GetMultAmount(eWeaponModifierType.SlowDownDamage);
             }
         }
 
@@ -79,8 +114,8 @@ namespace MoreMountains.TopDownEngine
         {
             bullet = this.GetComponent<Projectile>();
             damageOnTouch = this.GetComponent<DamageOnTouch>();
-            originalMaxDamage = (int)damageOnTouch.MaxDamageCaused;
-            originalMinDamage = (int)damageOnTouch.MinDamageCaused;
+            originalMaxDamage = damageOnTouch.MaxDamageCaused;
+            originalMinDamage = damageOnTouch.MinDamageCaused;
             critChance = 4f;
             hasInitialized = true;
             Debug.Log("ModsSetup");

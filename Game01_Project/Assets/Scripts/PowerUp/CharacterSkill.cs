@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using System;
 
 namespace MoreMountains.TopDownEngine
 {
     [AddComponentMenu("TopDown Engine/Character/Abilities/CharacterSkill")]
     public class CharacterSkill : CharacterAbility
     {
+        public static event EventHandler<WeaponModsAppliedEventArgs> On;
+
         public Skill currentSkill;
 
         /// the cooldown for this ability
         [Tooltip("the cooldown for this ability")]
         public MMCooldown cooldown;
-
 
         /// <summary>
         /// Here you should initialize our parameters
@@ -23,15 +25,6 @@ namespace MoreMountains.TopDownEngine
         {
             base.Initialization();
             cooldown.Initialization();
-        }
-
-        /// <summary>
-        /// Every frame, we check if we're crouched and if we still should be
-        /// </summary>
-        public override void ProcessAbility()
-        {
-            base.ProcessAbility();
-            cooldown.Update();
         }
 
         protected virtual void ActivateSkill()
@@ -44,6 +37,10 @@ namespace MoreMountains.TopDownEngine
 
                 currentSkill.Activate(cooldown);
                 cooldown.Start();
+            }
+            else
+            {
+                Debug.Log("SkillOnCD");
             }
         }
 
@@ -65,13 +62,46 @@ namespace MoreMountains.TopDownEngine
                 return;
             }
 
-            if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
+            if (currentSkill.Mode == Skill.Modes.OneTime)
             {
-                ActivateSkill();
+                if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
+                {
+                    ActivateSkill();
+                }
             }
-            if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonUp)
+
+            if (currentSkill.Mode == Skill.Modes.Continuous)
             {
-                StopSkill();
+                if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonPressed)
+                {
+                    ActivateSkill();
+                }
+                if (_inputManager.ActivateSkillButton.State.CurrentState == MMInput.ButtonStates.ButtonUp)
+                {
+                    StopSkill();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Every frame, we check if we're crouched and if we still should be
+        /// </summary>
+        public override void ProcessAbility()
+        {
+            base.ProcessAbility();
+            cooldown.Update();
+
+            if (!AbilityAuthorized)
+            {
+                return;
+            }
+
+            if(currentSkill.Mode == Skill.Modes.OneTime)
+            {
+                if(cooldown.CooldownState != MMCooldown.CooldownStates.Consuming && currentSkill.isActive)
+                {
+                    StopSkill();
+                }
             }
         }
 

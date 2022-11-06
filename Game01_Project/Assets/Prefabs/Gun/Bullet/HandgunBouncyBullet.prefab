@@ -70,13 +70,24 @@ PrefabInstance:
       propertyPath: ObstaclesLayerMask.m_Bits
       value: 12032
       objectReference: {fileID: 0}
+    - target: {fileID: 114564512680273234, guid: 68237974b013e10409136e0a91ba73a1,
+        type: 3}
+      propertyPath: LifeTime
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 114692968763625280, guid: 68237974b013e10409136e0a91ba73a1,
         type: 3}
       propertyPath: TargetLayerMask.m_Bits
       value: 9728
       objectReference: {fileID: 0}
+    - target: {fileID: 114692968763625280, guid: 68237974b013e10409136e0a91ba73a1,
+        type: 3}
+      propertyPath: DamageCausedKnockbackDirection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5130997859876136074, guid: 68237974b013e10409136e0a91ba73a1, type: 3}
+    - {fileID: 7102125674835834427, guid: 68237974b013e10409136e0a91ba73a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 68237974b013e10409136e0a91ba73a1, type: 3}
 --- !u!1 &2947971918792888856 stripped
 GameObject:
@@ -103,11 +114,11 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 5
+  LifeTime: 1.8
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 300
+  Speed: 150
   Acceleration: 0
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
@@ -120,5 +131,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2304
   BounceFeedback: {fileID: 0}
-  AmountOfBounces: {x: 5, y: 6}
+  AmountOfBounces: {x: 3, y: 3}
   SpeedModifier: {x: 1, y: 1}

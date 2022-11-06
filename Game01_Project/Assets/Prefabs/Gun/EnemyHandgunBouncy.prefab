@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5791989928423096049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565775507863266, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_Name
+      value: EnemyHandgunBouncy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202281423975200, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: AutoReload
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: ReloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: MagazineBased
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: TimeBetweenUses
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: ModifyMovementWhileAttacking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: PreventAllMovementWhileInUse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114020998038657194, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: TimeBetweenUsesReleaseInterruption
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114398865862223764, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: GameObjectToPool
+      value: 
+      objectReference: {fileID: 2947971918792888856, guid: 857c5e8f32abb6d45baa40a559a770be,
+        type: 3}
+    - target: {fileID: 114632726916512702, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: AimControl
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095693678172248852, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: LaserWidth.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095693678172248852, guid: b241009ddb02a294ea5ffa7acd3ecb0f,
+        type: 3}
+      propertyPath: LaserWidth.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114632726916512702, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b241009ddb02a294ea5ffa7acd3ecb0f, type: 3}

@@ -15,14 +15,18 @@ MonoBehaviour:
   name: SlowDownTime
   cooldown:
     Unlimited: 0
-    ConsumptionDuration: 0
+    ConsumptionDuration: 4.25
     PauseOnEmptyDuration: 0
-    RefillDuration: 60
+    RefillDuration: 48
     CanInterruptRefill: 0
     CooldownState: 3
-    CurrentDurationLeft: 2.8423197
+    CurrentDurationLeft: 3.269318
+  isActive: 0
   Mode: 0
   oneTimeDuration: 12
   TimeScale: 0.35
   LerpTimeScale: 1
-  LerpSpeed: 3
+  LerpSpeed: 12
+  damageIncreaseAmount: 15
+  critDamageIncreaseAmount: 25
+  critChanceIncreaseAmount: 25

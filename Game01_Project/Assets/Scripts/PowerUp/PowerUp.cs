@@ -13,10 +13,20 @@ public enum PowerUpType
 public class WeaponModsAppliedEventArgs : EventArgs
 {
     public float multiplier;
+    public float damageIncreaseMult;
+    public float critDamageIncreaseMult;
+    public float critChanceIncreaseMult;
+
 
     public WeaponModsAppliedEventArgs(float amount)
     {
         multiplier = amount / 100f;
+    }
+    public WeaponModsAppliedEventArgs(float damageIncreaseAmount, float critDamageIncreaseAmount, float critChanceIncreaseAmount)
+    {
+        damageIncreaseMult = damageIncreaseAmount / 100f;
+        critDamageIncreaseMult = critDamageIncreaseAmount / 100f;
+        critChanceIncreaseMult = critChanceIncreaseAmount / 100f;
     }
 }
 

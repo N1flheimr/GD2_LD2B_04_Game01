@@ -16,9 +16,9 @@ MonoBehaviour:
   powerUpName: "Sandevistan \nMk.5"
   description: 'Slows time to 35% for 12s.
 
-    Increase damage by 10%
+    Increase damage by 15%
 
     Increases
-    Crit Chance and Damage by 15%'
+    Crit Chance and Damage by 25%'
   powerUpType: 2
   newSkill: {fileID: 11400000, guid: 049061d213f5f3c4790142ec9fd35ad8, type: 2}

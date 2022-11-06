@@ -4949,7 +4949,7 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 5
+  LifeTime: 2.5
 --- !u!114 &114102311241470466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,8 +5012,8 @@ MonoBehaviour:
     m_Bits: 9728
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 15
+  MaxDamageCaused: 17
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
@@ -5124,12 +5124,12 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 5
+  LifeTime: 2.5
   FaceDirection: 1
   FaceMovement: 0
   MovementVector: 0
-  Speed: 600
-  Acceleration: 0
+  Speed: 200
+  Acceleration: 200
   Direction: {x: -1, y: 0, z: 0}
   DirectionCanBeChangedBySpawner: 1
   FlipValue: {x: -1, y: 1, z: 1}
