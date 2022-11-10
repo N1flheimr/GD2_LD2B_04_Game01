@@ -5045,12 +5045,12 @@ MonoBehaviour:
   Owner: {fileID: 0}
   TriggerFilter: 195
   MinDamageCaused: 75
-  MaxDamageCaused: 90
+  MaxDamageCaused: 80
   TypedDamages: []
   DamageCausedKnockbackType: 1
-  DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 4, y: 0, z: 0}
-  InvincibilityDuration: 0.2
+  DamageCausedKnockbackDirection: 2
+  DamageCausedKnockbackForce: {x: 10, y: 0, z: 0}
+  InvincibilityDuration: 0.5
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
@@ -5385,7 +5385,6 @@ GameObject:
   - component: {fileID: 1345016558195039667}
   - component: {fileID: 1055351681007538587}
   - component: {fileID: 7660852226354601534}
-  - component: {fileID: 7514045068629924023}
   - component: {fileID: 2976409086579556082}
   - component: {fileID: 3874745003930618338}
   m_Layer: 18
@@ -5426,7 +5425,6 @@ MonoBehaviour:
   - {fileID: 7660852226354601534}
   - {fileID: 2976409086579556082}
   - {fileID: 3874745003930618338}
-  - {fileID: 7514045068629924023}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -5510,44 +5508,6 @@ MonoBehaviour:
   MinPitch: 1
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
---- !u!114 &7514045068629924023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3825946426311183488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86fec89a17b5b2347a82ae1c77aced3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 0
-  Label: Freeze Frame
-  Chance: 100
-  Timing:
-    TimescaleMode: 0
-    ExcludeFromHoldingPauses: 0
-    ContributeToTotalDuration: 1
-    InitialDelay: 0
-    CooldownDuration: 0
-    InterruptsOnStop: 1
-    NumberOfRepeats: 0
-    RepeatForever: 0
-    DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
-    PlayDirection: 0
-    ConstantIntensity: 0
-    UseIntensityInterval: 0
-    IntensityIntervalMin: 0
-    IntensityIntervalMax: 0
-    Sequence: {fileID: 0}
-    TrackID: 0
-    Quantized: 0
-    TargetBPM: 120
-  DebugActive: 0
-  FreezeFrameDuration: 0.05
-  MinimumTimescaleThreshold: 0.1
 --- !u!114 &2976409086579556082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5688,7 +5648,6 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   - {fileID: 2100000, guid: d4cd643376433c14a89d978020e035ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

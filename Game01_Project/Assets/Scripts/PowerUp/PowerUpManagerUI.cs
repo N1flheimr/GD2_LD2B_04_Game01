@@ -23,7 +23,7 @@ namespace MoreMountains.TopDownEngine
         private void Start()
         {
             CreatePowerUpButtons();
-            Test.Instance.OnPowerUpSelectionStart += Test_OnPowerUpSelectionStart;
+            PowerUpManager.Instance.OnPowerUpSelectionStart += Test_OnPowerUpSelectionStart;
         }
 
         private void Test_OnPowerUpSelectionStart(object sender, EventArgs e)
@@ -53,6 +53,7 @@ namespace MoreMountains.TopDownEngine
                     Debug.Log("skipped" + randomIndex);
                     continue;
                 }
+
                 Transform powerUpButtonTransform = Instantiate(powerUpButtonPrefab, powerUpButtonContainerTransform);
                 PowerUpButtonUI powerUpButtonUI = powerUpButtonTransform.GetComponent<PowerUpButtonUI>();
                 powerUpButtonUIList.Add(powerUpButtonUI);

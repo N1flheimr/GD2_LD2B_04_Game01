@@ -173,6 +173,211 @@ MonoBehaviour:
         MinPitch: 0.9
         MaxPitch: 1
         SfxAudioMixerGroup: {fileID: 0}
+--- !u!1 &887950222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887950223}
+  - component: {fileID: 887950224}
+  m_Layer: 10
+  m_Name: SlowDownTimeFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &887950223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887950222}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7765684201743967975}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887950224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887950222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks: []
+  InitializationMode: 2
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+  FeedbacksList:
+  - rid: 3875970940575154199
+  KeepPlayModeChanges: 0
+  PerformanceMode: 0
+  ForceStopFeedbacksOnDisable: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 3875970940575154199
+      type: {class: MMF_Vignette, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Feedbacks.PostProcessing}
+      data:
+        Active: 1
+        UniqueID: 450254318
+        Label: Vignette
+        Channel: 0
+        Chance: 100
+        DisplayColor: {r: 0, g: 0, b: 0, a: 1}
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        Owner: {fileID: 887950224}
+        DebugActive: 0
+        Duration: 0.1
+        ResetShakerValuesAfterShake: 1
+        ResetTargetValuesAfterShake: 1
+        Intensity:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 0.500473
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapIntensityZero: 0
+        RemapIntensityOne: 1
+        RelativeIntensity: 0
+        InterpolateColor: 0
+        ColorCurve:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.05
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.95
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapColorZero: 1
+        RemapColorOne: 1
+        TargetColor: {r: 0.3396388, g: 0.19366322, b: 0.3773585, a: 1}
 --- !u!1 &1630448620
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +816,7 @@ MonoBehaviour:
         TargetTransform: {fileID: 0}
         Direction: {x: 0, y: 0, z: 0}
         TargetHealth: {fileID: 7848730206413164997}
-        Formatting: 
+        Formatting: 0
         DamageDirectionImpactsTextDirection: 0
         DamageDirectionMultiplier: 1.6
 --- !u!1 &1005323839714051712
@@ -625,7 +830,7 @@ GameObject:
   - component: {fileID: 1406987996073004014}
   - component: {fileID: 3300411745804119680}
   - component: {fileID: 4543932073401570001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WorldSpaceCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +937,8 @@ GameObject:
   m_Component:
   - component: {fileID: 980973893342750063}
   - component: {fileID: 4347752622311985401}
-  m_Layer: 0
+  - component: {fileID: 2073515547}
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +952,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227925640893499739}
-  m_LocalRotation: {x: -0.13052599, y: -0, z: -0, w: 0.99144495}
+  m_LocalRotation: {x: -0.0832706, y: -0, z: -0, w: 0.99652696}
   m_LocalPosition: {x: 0, y: 0, z: -5.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -758,7 +964,7 @@ RectTransform:
   - {fileID: 7244082757616653410}
   m_Father: {fileID: 3994082093988152550}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -9.553, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -3.4}
@@ -815,6 +1021,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2073515547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227925640893499739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0499db015d190d4dbf5013835a4a619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 4347752622311985401}
+  currentWeapon: {fileID: 0}
 --- !u!1 &1785344581046826649
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,8 +1044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3994082093988152550}
-  - component: {fileID: 8808321914159976757}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SliderUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,20 +1072,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 3.75}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8808321914159976757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785344581046826649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0499db015d190d4dbf5013835a4a619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 4347752622311985401}
-  characterHandleWeapon: {fileID: 0}
 --- !u!1 &2304670857000371508
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +1083,7 @@ GameObject:
   - component: {fileID: 2041121264864891157}
   - component: {fileID: 2220683286925975332}
   - component: {fileID: 840667808439063219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +1161,7 @@ GameObject:
   - component: {fileID: 4102551399904224178}
   - component: {fileID: 7519192319448223921}
   - component: {fileID: 914325310882798095}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7244082757616653410}
   - component: {fileID: 6428979013184872186}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI_reload_border (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1076,7 +1281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3722565760495613980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.3, y: 0.5999993, z: 2.4999976}
+  m_LocalPosition: {x: 41.5, y: 0, z: 2.4}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1145,7 +1350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623594798257831785}
   - component: {fileID: 5792658318255424685}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: UI_reload_border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291197449803827935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.3, y: 0.5999993, z: 2.4999976}
+  m_LocalPosition: {x: -41.5, y: 0, z: 2.4}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1228,7 +1433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6073434046363125055}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5605670421212000948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616753893257167341}
   - component: {fileID: 3667650681034756700}
-  m_Layer: 13
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1605,7 @@ GameObject:
   - component: {fileID: 2832434350684067526}
   - component: {fileID: 3821204879395001814}
   - component: {fileID: 5196475794460383799}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1506,7 +1711,7 @@ GameObject:
   - component: {fileID: 7848730205028594974}
   - component: {fileID: 7848730205028594972}
   - component: {fileID: 7848730205028594975}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1794,7 @@ GameObject:
   - component: {fileID: 7848730205908775432}
   - component: {fileID: 7848730205908775435}
   - component: {fileID: 7848730205908775434}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1762,7 +1967,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.65
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -1781,9 +1986,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &7848730206413165003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,7 +2159,7 @@ MonoBehaviour:
     Unlimited: 0
     ConsumptionDuration: 0
     PauseOnEmptyDuration: 0
-    RefillDuration: 0.45
+    RefillDuration: 0.4
     CanInterruptRefill: 0
     CooldownState: 0
     CurrentDurationLeft: 0
@@ -2110,8 +2315,8 @@ MonoBehaviour:
   AbilityStartSfx: {fileID: 0}
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 887950224}
+  AbilityStopFeedbacks: {fileID: 887950224}
   AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
@@ -2168,6 +2373,7 @@ Transform:
   m_Children:
   - {fileID: 1630448621}
   - {fileID: 68611605}
+  - {fileID: 887950223}
   m_Father: {fileID: 7848730206413165047}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

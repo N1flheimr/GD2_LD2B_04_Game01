@@ -47,6 +47,8 @@ namespace MoreMountains.TopDownEngine
 
         protected void PowerUpSelectionCompleted()
         {
+            PowerUpManager.Instance.AddSelectedPowerUpList(this);
+            PowerUpManager.Instance.RemoveAvailablePowerUpList(this);
             OnPowerUpSelectionComplete?.Invoke(this, EventArgs.Empty);
         }
     }

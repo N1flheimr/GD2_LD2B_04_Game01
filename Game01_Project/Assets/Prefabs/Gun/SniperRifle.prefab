@@ -938,19 +938,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponName: O'Five
+  weaponSprite: {fileID: 21300010, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   WeaponCurrentlyActive: 1
-  TriggerMode: 1
+  TriggerMode: 0
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.9
+  TimeBetweenUses: 0.7
   TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
   MagazineBased: 1
   MagazineSize: 3
-  AutoReload: 1
-  NoInputReload: 0
+  AutoReload: 0
+  NoInputReload: 1
   ReloadTime: 1.4
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
@@ -967,7 +968,7 @@ MonoBehaviour:
   MovementMultiplier: 0
   PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
-  RecoilForce: 0
+  RecoilForce: 14
   Animators:
   - {fileID: 95527022027317358}
   PerformAnimatorSanityChecks: 0
@@ -6302,7 +6303,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  MMGameEventName: Reload
+  MMGameEventName: ReloadEvent
 --- !u!1 &1776112340567828837
 GameObject:
   m_ObjectHideFlags: 0

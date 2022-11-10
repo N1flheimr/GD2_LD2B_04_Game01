@@ -4,6 +4,7 @@ using MoreMountains.Tools;
 using System;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace MoreMountains.TopDownEngine
@@ -14,6 +15,7 @@ namespace MoreMountains.TopDownEngine
 	[AddComponentMenu("TopDown Engine/Weapons/Projectile Weapon")]
 	public class ProjectileWeapon : Weapon, MMEventListener<TopDownEngineEvent>
 	{
+
 		[MMInspectorGroup("Projectiles", true, 22)]
 		/// the offset position at which the projectile will spawn
 		[Tooltip("the offset position at which the projectile will spawn")]
@@ -64,7 +66,7 @@ namespace MoreMountains.TopDownEngine
 		[MMInspectorButton("TestShoot")]
 		/// a button to test the shoot method
 		public bool TestShootButton;
-        
+
 		/// <summary>
 		/// A test method that triggers the weapon
 		/// </summary>

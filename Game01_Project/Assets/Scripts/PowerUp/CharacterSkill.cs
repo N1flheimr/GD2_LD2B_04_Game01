@@ -10,7 +10,6 @@ namespace MoreMountains.TopDownEngine
     [AddComponentMenu("TopDown Engine/Character/Abilities/CharacterSkill")]
     public class CharacterSkill : CharacterAbility
     {
-        public static event EventHandler<WeaponModsAppliedEventArgs> On;
 
         public Skill currentSkill;
 
@@ -29,7 +28,6 @@ namespace MoreMountains.TopDownEngine
 
         protected virtual void ActivateSkill()
         {
-            cooldown = currentSkill.cooldown;
 
             if (cooldown.Ready())
             {
@@ -109,7 +107,7 @@ namespace MoreMountains.TopDownEngine
         {
             currentSkill = skill;
             cooldown = currentSkill.cooldown;
-            cooldown.CurrentDurationLeft = currentSkill.cooldown.RefillDuration;
+            cooldown.Initialization();
         }
     }
 }

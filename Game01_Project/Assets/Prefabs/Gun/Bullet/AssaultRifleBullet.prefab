@@ -5048,8 +5048,8 @@ MonoBehaviour:
   MaxDamageCaused: 26
   TypedDamages: []
   DamageCausedKnockbackType: 1
-  DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 2, y: 0, z: 0}
+  DamageCausedKnockbackDirection: 2
+  DamageCausedKnockbackForce: {x: 6.6, y: 0, z: 0}
   InvincibilityDuration: 0.1
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3

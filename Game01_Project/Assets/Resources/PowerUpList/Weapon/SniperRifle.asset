@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpIcon: {fileID: 21300010, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: O'Five
-  description: 'Bullet Type: Single Piercing
+  description: 'Bullet Type: Single, Piercing
 
-    Damage: 75-95
+    Damage: 75-80
 
     Magazine: 3
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using UnityEngine.UI;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -10,12 +11,14 @@ namespace MoreMountains.TopDownEngine
 	/// This base class, meant to be extended (see ProjectileWeapon.cs for an example of that) handles rate of fire (rate of use actually), and ammo reloading
 	/// </summary>
 	[SelectionBase]
-	public class Weapon : MMMonoBehaviour 
+	public class Weapon : MMMonoBehaviour
 	{
 		[MMInspectorGroup("ID", true, 7)]
 		/// the name of the weapon, only used for debugging
 		[Tooltip("the name of the weapon, only used for debugging")]
 		public string WeaponName;
+
+		public Sprite weaponSprite;
 		/// the possible use modes for the trigger
 		public enum TriggerModes { SemiAuto, Auto }
 		/// the possible states the weapon can be in

@@ -14,7 +14,7 @@ namespace MoreMountains.TopDownEngine
         public static event EventHandler OnSlowDownTimeSkillStop;
 
         [Tooltip("the time scale to switch to when the time control button gets pressed")]
-        public float TimeScale;
+        public float TimeScale = 0.35f;
 
         /// whether or not the timescale should get lerped
 		[Tooltip("whether or not the timescale should get lerped")]
@@ -31,9 +31,9 @@ namespace MoreMountains.TopDownEngine
         {
             CharacterMovement playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>();
 
-            playerMovement.ApplyMovementMultiplier((playerMovement.MovementSpeedMultiplier / TimeScale), oneTimeDuration * TimeScale);
-
             MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, TimeScale, oneTimeDuration, LerpTimeScale, LerpSpeed, false);
+
+            playerMovement.ApplyMovementMultiplier((playerMovement.MovementSpeedMultiplier / TimeScale), oneTimeDuration * TimeScale);
 
             isActive = true;
             cooldown.Start();

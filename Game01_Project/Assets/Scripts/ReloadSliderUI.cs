@@ -46,7 +46,7 @@ namespace MoreMountains.TopDownEngine
 
         public void OnMMEvent(MMGameEvent eventType)
         {
-            if (eventType.EventName == "Reload")
+            if (eventType.EventName == "ReloadEvent")
             {
                 currentWeapon = GetComponentInParent<CharacterHandleWeapon>().CurrentWeapon;
                 SliderReset();
@@ -60,5 +60,10 @@ namespace MoreMountains.TopDownEngine
         {
             this.MMEventStartListening<MMGameEvent>();
         }
+
+        //protected void OnDisable()
+        //{
+        //    this.MMEventStopListening<MMGameEvent>();
+        //}
     }
 }

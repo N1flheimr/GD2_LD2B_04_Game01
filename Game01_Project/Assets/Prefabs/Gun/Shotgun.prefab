@@ -104,7 +104,7 @@ Transform:
   - {fileID: 3537960335491944234}
   - {fileID: 4071164249864032}
   m_Father: {fileID: 4084743482565372}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &198164451643785834
 ParticleSystem:
@@ -20181,7 +20181,6 @@ Transform:
   m_Children:
   - {fileID: 4599272732225086}
   - {fileID: 7362157656728655814}
-  - {fileID: 6081608060568828441}
   - {fileID: 4286680684652414092}
   - {fileID: 4293410691515634}
   m_Father: {fileID: 0}
@@ -20199,20 +20198,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7ce0b8cf4b34859b9e359283b2e7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: Guts Shotgun
+  WeaponName: Guts
+  weaponSprite: {fileID: 21300000, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   WeaponCurrentlyActive: 1
   TriggerMode: 1
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.4
+  TimeBetweenUses: 0.5
   TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
   MagazineBased: 1
   MagazineSize: 6
-  AutoReload: 1
-  NoInputReload: 0
+  AutoReload: 0
+  NoInputReload: 1
   ReloadTime: 1.2
   AmmoConsumedPerShot: 1
   AutoDestroyWhenEmpty: 0
@@ -20229,7 +20229,7 @@ MonoBehaviour:
   MovementMultiplier: 0
   PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
-  RecoilForce: 0
+  RecoilForce: 10
   Animators:
   - {fileID: 95889161802339608}
   PerformAnimatorSanityChecks: 0
@@ -20251,16 +20251,16 @@ MonoBehaviour:
   WeaponUsedMMFeedbackAlt: {fileID: 0}
   WeaponStopMMFeedback: {fileID: 0}
   WeaponReloadMMFeedback: {fileID: 4487833912311160538}
-  WeaponReloadNeededMMFeedback: {fileID: 5711712959867855545}
+  WeaponReloadNeededMMFeedback: {fileID: 0}
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
   ProjectileSpawnOffset: {x: 0, y: 0.5, z: 1.6}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
-  ProjectilesPerShot: 5
+  ProjectilesPerShot: 6
   SpawnTransforms: []
   SpawnTransformsMode: 1
-  Spread: {x: 25, y: 25, z: 15}
+  Spread: {x: 15, y: 25, z: 15}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
   SpawnPosition: {x: 1.2895584, y: 0.5, z: 0.94712156}
@@ -26322,136 +26322,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &3992776521171101821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6081608060568828441}
-  - component: {fileID: 5711712959867855545}
-  - component: {fileID: 3087957815474232757}
-  m_Layer: 0
-  m_Name: WeaponReloadNeededMMFeedback
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6081608060568828441
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3992776521171101821}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3444152, y: -5.0252767, z: 9.000002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4084743482565372}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5711712959867855545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3992776521171101821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Feedbacks:
-  - {fileID: 3087957815474232757}
-  InitializationMode: 2
-  SafeMode: 3
-  Direction: 0
-  AutoChangeDirectionOnEnd: 0
-  AutoPlayOnStart: 0
-  AutoPlayOnEnable: 0
-  ForceTimescaleMode: 0
-  ForcedTimescaleMode: 1
-  DurationMultiplier: 1
-  DisplayFullDurationDetails: 0
-  PlayerTimescaleMode: 1
-  CooldownDuration: 0
-  InitialDelay: 0
-  CanPlay: 1
-  CanPlayWhileAlreadyPlaying: 1
-  ChanceToPlay: 100
-  FeedbacksIntensity: 1
-  Events:
-    TriggerMMFeedbacksEvents: 0
-    TriggerUnityEvents: 1
-    OnPlay:
-      m_PersistentCalls:
-        m_Calls: []
-    OnPause:
-      m_PersistentCalls:
-        m_Calls: []
-    OnResume:
-      m_PersistentCalls:
-        m_Calls: []
-    OnRevert:
-      m_PersistentCalls:
-        m_Calls: []
-    OnComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  DebugActive: 0
---- !u!114 &3087957815474232757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3992776521171101821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2ce51367856bd49b72678cc4263225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 1
-  Label: Sound
-  Chance: 100
-  Timing:
-    TimescaleMode: 0
-    ExcludeFromHoldingPauses: 0
-    ContributeToTotalDuration: 1
-    InitialDelay: 0
-    CooldownDuration: 0
-    InterruptsOnStop: 1
-    NumberOfRepeats: 0
-    RepeatForever: 0
-    DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
-    PlayDirection: 0
-    ConstantIntensity: 0
-    UseIntensityInterval: 0
-    IntensityIntervalMin: 0
-    IntensityIntervalMax: 0
-    Sequence: {fileID: 0}
-    TrackID: 0
-    Quantized: 0
-    TargetBPM: 120
-  DebugActive: 0
-  Sfx: {fileID: 8300000, guid: bbefda97fc1ed234686fff2f8dedf1cf, type: 3}
-  RandomSfx: []
-  TestButton: 0
-  TestStopButton: 0
-  PlayMethod: 0
-  PoolSize: 10
-  MinVolume: 1
-  MaxVolume: 1
-  MinPitch: 1
-  MaxPitch: 1
-  SfxAudioMixerGroup: {fileID: 0}
 --- !u!1 &7850926924472372509
 GameObject:
   m_ObjectHideFlags: 0
@@ -26463,7 +26333,7 @@ GameObject:
   - component: {fileID: 4286680684652414092}
   - component: {fileID: 4487833912311160538}
   - component: {fileID: 4297574672593860281}
-  - component: {fileID: 791668544894321064}
+  - component: {fileID: 7222118672205717429}
   m_Layer: 0
   m_Name: WeaponReloadMMFeedback
   m_TagString: Untagged
@@ -26484,7 +26354,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4084743482565372}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4487833912311160538
 MonoBehaviour:
@@ -26500,7 +26370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 4297574672593860281}
-  - {fileID: 791668544894321064}
+  - {fileID: 7222118672205717429}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -26579,12 +26449,12 @@ MonoBehaviour:
   TestStopButton: 0
   PlayMethod: 0
   PoolSize: 10
-  MinVolume: 0.5
-  MaxVolume: 0.5
+  MinVolume: 0.3
+  MaxVolume: 0.3
   MinPitch: 0.9
   MaxPitch: 1
   SfxAudioMixerGroup: {fileID: 0}
---- !u!114 &791668544894321064
+--- !u!114 &7222118672205717429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26620,7 +26490,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  MMGameEventName: Reload
+  MMGameEventName: ReloadEvent
 --- !u!1 &8195576600807036745
 GameObject:
   m_ObjectHideFlags: 0

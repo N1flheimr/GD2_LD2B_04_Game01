@@ -19,9 +19,9 @@ MonoBehaviour:
     PauseOnEmptyDuration: 0
     RefillDuration: 48
     CanInterruptRefill: 0
-    CooldownState: 3
-    CurrentDurationLeft: 3.269318
-  isActive: 0
+    CooldownState: 1
+    CurrentDurationLeft: 1.8235806
+  isActive: 1
   Mode: 0
   oneTimeDuration: 12
   TimeScale: 0.35
