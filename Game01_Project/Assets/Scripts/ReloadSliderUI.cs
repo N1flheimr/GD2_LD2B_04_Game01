@@ -10,6 +10,8 @@ namespace MoreMountains.TopDownEngine
     {
         [SerializeField] private Slider slider;
         [SerializeField] private Weapon currentWeapon;
+        [SerializeField] private Image[] allSpriteInSlider;
+        private bool isSliderActive;
 
         private void Start()
         {
@@ -17,18 +19,23 @@ namespace MoreMountains.TopDownEngine
             currentWeapon = GetComponentInParent<CharacterHandleWeapon>().InitialWeapon;
             SliderReset();
             SetSliderMaxValue(currentWeapon.ReloadTime);
-            slider.gameObject.SetActive(false);
+            allSpriteInSlider = GetComponentsInChildren<Image>();
+            foreach (Image image in allSpriteInSlider)
+            {
+                var tempColor = image.color;
+                tempColor.a = 0f;
+                image.color = tempColor;
+            }
         }
 
         private void Update()
         {
-            if (slider.IsActive())
+            if (isSliderActive)
             {
                 slider.value += Time.deltaTime;
 
                 if (slider.value >= slider.maxValue)
                 {
-                    slider.gameObject.SetActive(false);
                     SliderReset();
                 }
             }
@@ -37,6 +44,13 @@ namespace MoreMountains.TopDownEngine
         private void SliderReset()
         {
             slider.value = 0;
+            foreach (Image image in allSpriteInSlider)
+            {
+                var tempColor = image.color;
+                tempColor.a = 0f;
+                image.color = tempColor;
+            }
+            isSliderActive = false;
         }
 
         private void SetSliderMaxValue(float maxValue)
@@ -51,7 +65,13 @@ namespace MoreMountains.TopDownEngine
                 currentWeapon = GetComponentInParent<CharacterHandleWeapon>().CurrentWeapon;
                 SliderReset();
                 SetSliderMaxValue(currentWeapon.ReloadTime);
-                slider.gameObject.SetActive(true);
+                foreach (Image image in allSpriteInSlider)
+                {
+                    var tempColor = image.color;
+                    tempColor.a = 1f;
+                    image.color = tempColor;
+                }
+                isSliderActive = true;
                 Debug.Log("Reloading");
             }
         }
