@@ -16,7 +16,7 @@ MonoBehaviour:
   powerUpName: Guts Shotgun
   description: 'Bullet Type: Spread
 
-    Damage: 24-32/Bullet
+    Damage: 19-25/Bullet
 
     Magazine: 6
 

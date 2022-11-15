@@ -17,16 +17,16 @@ MonoBehaviour:
     Unlimited: 0
     ConsumptionDuration: 4.25
     PauseOnEmptyDuration: 0
-    RefillDuration: 48
+    RefillDuration: 24
     CanInterruptRefill: 0
     CooldownState: 1
-    CurrentDurationLeft: 1.8235806
+    CurrentDurationLeft: 3.387574
   isActive: 1
   Mode: 0
   oneTimeDuration: 12
   TimeScale: 0.35
   LerpTimeScale: 1
   LerpSpeed: 12
-  damageIncreaseAmount: 15
-  critDamageIncreaseAmount: 25
-  critChanceIncreaseAmount: 25
+  damageIncreaseAmount: 10
+  critDamageIncreaseAmount: 15
+  critChanceIncreaseAmount: 15

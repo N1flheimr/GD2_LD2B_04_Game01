@@ -18,11 +18,11 @@ MonoBehaviour:
 
     Slows time to 35% for 12s.
 
-    Increase damage by 15%
+    Increase damage by 10%
 
     Increases
-    Crit Chance and Damage by 25%
+    Crit Chance and Damage by 15%
 
-    Cooldown 60s'
+    Cooldown 30s'
   powerUpType: 2
   newSkill: {fileID: 11400000, guid: 049061d213f5f3c4790142ec9fd35ad8, type: 2}

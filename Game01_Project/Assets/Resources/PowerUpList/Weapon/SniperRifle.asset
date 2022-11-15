@@ -16,7 +16,7 @@ MonoBehaviour:
   powerUpName: O'Five
   description: 'Bullet Type: Single, Piercing
 
-    Damage: 75-80
+    Damage: 60-75
 
     Magazine: 3
 
