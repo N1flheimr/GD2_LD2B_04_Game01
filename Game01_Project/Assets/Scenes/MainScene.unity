@@ -661,6 +661,8 @@ MonoBehaviour:
   RespawnDelay: 2
   DelayBeforeDeathScreen: 1
   UseLevelBounds: 0
+  Room: []
+  roomCleared: 0
   LoadingSceneMode: 1
   LoadingSceneName: LoadingScreen
   AdditiveLoadingSettings:
@@ -12534,7 +12536,7 @@ PrefabInstance:
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.147705
+      value: -0.14766133
       objectReference: {fileID: 0}
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
@@ -12544,7 +12546,7 @@ PrefabInstance:
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.21224
+      value: 29.212267
       objectReference: {fileID: 0}
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
@@ -13187,7 +13189,7 @@ PrefabInstance:
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.890306
+      value: -0.20001745
       objectReference: {fileID: 0}
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
@@ -13197,7 +13199,7 @@ PrefabInstance:
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.823209
+      value: 9.700011
       objectReference: {fileID: 0}
     - target: {fileID: 1470689016546173485, guid: c6d82203afb4f8f4c94c852818527dc6,
         type: 3}
