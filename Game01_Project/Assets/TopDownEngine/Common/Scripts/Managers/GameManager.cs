@@ -184,6 +184,10 @@ namespace MoreMountains.TopDownEngine
         /// the stored selected character
         public Character StoredCharacter { get; set; }
 
+        public Room[] Room;
+
+        public int roomCleared = 0;
+
         // storage
         protected bool _inventoryOpen = false;
         protected bool _pauseMenuOpen = false;
@@ -198,6 +202,7 @@ namespace MoreMountains.TopDownEngine
         {
             base.Awake();
             PointsOfEntry = new List<PointsOfEntryStorage>();
+            roomCleared = 0;
         }
 
         /// <summary>
@@ -209,6 +214,7 @@ namespace MoreMountains.TopDownEngine
             Screen.SetResolution((int)ScreenResolution.x, (int)ScreenResolution.y, false);
             _initialCurrentLives = CurrentLives;
             _initialMaximumLives = MaximumLives;
+            Room = GameObject.FindObjectsOfType<Room>();
         }
 
         /// <summary>
@@ -535,5 +541,6 @@ namespace MoreMountains.TopDownEngine
             this.MMEventStopListening<TopDownEngineEvent>();
             this.MMEventStopListening<TopDownEnginePointEvent>();
         }
+
     }
 }

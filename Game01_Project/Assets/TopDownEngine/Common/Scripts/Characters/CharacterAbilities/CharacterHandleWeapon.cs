@@ -17,7 +17,7 @@ namespace MoreMountains.TopDownEngine
     [AddComponentMenu("TopDown Engine/Character/Abilities/Character Handle Weapon")]
     public class CharacterHandleWeapon : CharacterAbility
     {
-        public static event Action OnWeaponChanged;
+        public static event Action OnPlayerWeaponChanged;
         /// This method is only used to display a helpbox text at the beginning of the ability's inspector
         public override string HelpBoxText() { return "This component will allow your character to pickup and use weapons. What the weapon will do is defined in the Weapon classes. This just describes the behaviour of the 'hand' holding the weapon, not the weapon itself. Here you can set an initial weapon for your character to start with, allow weapon pickup, and specify a weapon attachment (a transform inside of your character, could be just an empty child gameobject, or a subpart of your model."; }
 
@@ -217,7 +217,7 @@ namespace MoreMountains.TopDownEngine
         /// Gets input and triggers methods based on what's been pressed
         /// </summary>
         protected override void HandleInput()
-        {    
+        {
             if (!AbilityAuthorized
                 || (_condition.CurrentState != CharacterStates.CharacterConditions.Normal)
                 || IsMouseOverUI())
@@ -433,7 +433,10 @@ namespace MoreMountains.TopDownEngine
                 CurrentWeapon = null;
             }
 
-            OnWeaponChanged?.Invoke();
+            if (_character.CharacterType == Character.CharacterTypes.Player)
+            {
+                OnPlayerWeaponChanged?.Invoke();
+            }
 
             if (OnWeaponChange != null)
             {

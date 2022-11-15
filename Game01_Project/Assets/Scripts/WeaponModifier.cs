@@ -36,7 +36,7 @@ namespace MoreMountains.TopDownEngine
             weaponModsArray = new bool[(int)eWeaponModifierType.lastWeaponMod];
             multAmountArray = new float[(int)eWeaponModifierType.lastWeaponMod];
 
-            CharacterHandleWeapon.OnWeaponChanged += CharacterHandleWeapon_OnWeaponChanged;
+            CharacterHandleWeapon.OnPlayerWeaponChanged += CharacterHandleWeapon_OnWeaponChanged;
             FastReload.OnFastReloadApplied += FastReload_OnFastReloadApplied;
             MagazineIncrease.OnMagazineIncreaseApplied += MagazineIncrease_OnMagazineIncreaseApplied;
             WeaponDamageUpgrade.OnDamageUpgradeApplied += WeaponDamageUpgrade_OnDamageUpgradeApplied;
@@ -137,6 +137,10 @@ namespace MoreMountains.TopDownEngine
         public float GetMultAmount(eWeaponModifierType weaponModifierType)
         {
             return multAmountArray[(int)weaponModifierType];
+        }
+        private void OnDestroy()
+        {
+            CharacterHandleWeapon.OnPlayerWeaponChanged -= CharacterHandleWeapon_OnWeaponChanged;
         }
     }
 }

@@ -72,5 +72,10 @@ namespace MoreMountains.TopDownEngine
             GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
             powerUpUIGameObject.SetActive(false);
         }
+
+        private void OnDestroy()
+        {
+            PowerUp.OnPowerUpSelectionComplete -= PowerUp_OnPowerUpSelectionComplete;
+        }
     }
 }

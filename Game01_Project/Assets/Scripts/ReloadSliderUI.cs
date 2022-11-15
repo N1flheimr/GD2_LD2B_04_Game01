@@ -81,9 +81,9 @@ namespace MoreMountains.TopDownEngine
             this.MMEventStartListening<MMGameEvent>();
         }
 
-        //protected void OnDisable()
-        //{
-        //    this.MMEventStopListening<MMGameEvent>();
-        //}
+        protected void OnDisable()
+        {
+            this.MMEventStopListening<MMGameEvent>();
+        }
     }
 }

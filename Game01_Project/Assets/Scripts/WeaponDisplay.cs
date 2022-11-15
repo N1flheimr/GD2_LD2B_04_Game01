@@ -27,4 +27,9 @@ public class WeaponDisplay : MonoBehaviour
             weaponIcon.sprite = characterHandleWeapon.CurrentWeapon.weaponSprite;
         }
     }
+
+    private void OnDestroy()
+    {
+        PowerUp.OnPowerUpSelectionComplete -= PowerUp_OnPowerUpSelectionComplete;
+    }
 }

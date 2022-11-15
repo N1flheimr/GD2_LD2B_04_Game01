@@ -10,6 +10,7 @@ TagManager:
   - World
   - NoMask
   - Door
+  - Room
   layers:
   - Default
   - TransparentFX

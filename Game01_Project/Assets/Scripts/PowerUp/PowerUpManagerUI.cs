@@ -23,10 +23,10 @@ namespace MoreMountains.TopDownEngine
         private void Start()
         {
             CreatePowerUpButtons();
-            PowerUpManager.Instance.OnPowerUpSelectionStart += Test_OnPowerUpSelectionStart;
+            PowerUpManager.Instance.OnPowerUpSelectionStart += PowerUpManager_OnPowerUpSelectionStart;
         }
 
-        private void Test_OnPowerUpSelectionStart(object sender, EventArgs e)
+        private void PowerUpManager_OnPowerUpSelectionStart(object sender, EventArgs e)
         {
             CreatePowerUpButtons();
         }

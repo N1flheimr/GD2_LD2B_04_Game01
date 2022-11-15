@@ -23,6 +23,14 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private bool useLerp = true;
     [SerializeField] private float lerpSpeed = 6f;
 
+    [SerializeField] private int roomNumber = 1;
+
+    [SerializeField] private bool isLastRoom = false;
+    private void Awake()
+    {
+        roomNumber = 1;
+        isLastRoom = false;
+    }
     private void Start()
     {
         doorGameObjectArray = GameObject.FindGameObjectsWithTag("Door");
@@ -31,6 +39,13 @@ public class BattleSystem : MonoBehaviour
     public void StartBattle()
     {
         Debug.Log("StartBattle");
+
+        roomNumber += LevelManager.Instance.roomCleared;
+        if (roomNumber == LevelManager.Instance.Room.Length)
+        {
+            Debug.Log(roomNumber);
+            isLastRoom = true;
+        }
         foreach (EnemySpawn enemySpawn in enemySpawnArray)
         {
             enemySpawn.Spawn();
@@ -46,10 +61,19 @@ public class BattleSystem : MonoBehaviour
     {
         MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, timeScale, slowDownDuration, useLerp, lerpSpeed, false);
         yield return new WaitForSecondsRealtime(1f);
-        PowerUpManager.Instance.StartPowerUpSelection();
-        foreach (GameObject doorGameObject in doorGameObjectArray)
+        if (isLastRoom)
         {
-            doorGameObject.SetActive(false);
+            GUIManager.Instance.SetGameClearScene(true);
+            GameManager.Instance.Pause(PauseMethods.NoPauseMenu);
+        }
+        else
+        {
+            PowerUpManager.Instance.StartPowerUpSelection();
+            foreach (GameObject doorGameObject in doorGameObjectArray)
+            {
+                doorGameObject.SetActive(false);
+            }
+            LevelManager.Instance.roomCleared++;
         }
     }
 
