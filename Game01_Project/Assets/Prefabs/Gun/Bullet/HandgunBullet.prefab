@@ -5013,8 +5013,8 @@ MonoBehaviour:
     m_Bits: 11008
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 18
-  MaxDamageCaused: 24
+  MinDamageCaused: 15
+  MaxDamageCaused: 18
   TypedDamages: []
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 2

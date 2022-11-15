@@ -146,7 +146,6 @@ namespace MoreMountains.TopDownEngine
         /// the target frame rate for the game
         [Tooltip("the target frame rate for the game")]
         public int TargetFrameRate = 300;
-        public Vector2 ScreenResolution;
         [Header("Lives")]
         /// the maximum amount of lives the character can currently have
         [Tooltip("the maximum amount of lives the character can currently have")]
@@ -184,9 +183,6 @@ namespace MoreMountains.TopDownEngine
         /// the stored selected character
         public Character StoredCharacter { get; set; }
 
-        public Room[] Room;
-
-        public int roomCleared = 0;
 
         // storage
         protected bool _inventoryOpen = false;
@@ -202,7 +198,7 @@ namespace MoreMountains.TopDownEngine
         {
             base.Awake();
             PointsOfEntry = new List<PointsOfEntryStorage>();
-            roomCleared = 0;
+           
         }
 
         /// <summary>
@@ -211,10 +207,8 @@ namespace MoreMountains.TopDownEngine
         protected virtual void Start()
         {
             Application.targetFrameRate = TargetFrameRate;
-            Screen.SetResolution((int)ScreenResolution.x, (int)ScreenResolution.y, false);
             _initialCurrentLives = CurrentLives;
             _initialMaximumLives = MaximumLives;
-            Room = GameObject.FindObjectsOfType<Room>();
         }
 
         /// <summary>

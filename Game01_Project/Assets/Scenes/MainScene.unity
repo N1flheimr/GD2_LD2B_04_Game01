@@ -3526,14 +3526,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutomaticallyUnparentOnAwake: 1
   TargetFrameRate: 120
-  ScreenResolution: {x: 1920, y: 1080}
+  ScreenResolutionX: 1920
+  ScreenResolutionY: 1080
   MaximumLives: 0
   CurrentLives: 0
   GameOverScene: 
   Points: 0
   PauseGameWhenInventoryOpens: 1
-  Room: []
-  roomCleared: 0
 --- !u!4 &598334959
 Transform:
   m_ObjectHideFlags: 0
