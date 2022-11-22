@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955a5d54f1ebf6845b3c80b364e1160e, type: 3}
   m_Name: SlowDownTime
   m_EditorClassIdentifier: 
-  powerUpIcon: {fileID: 21300000, guid: a1fbd1aaf76d0b94e88551b7c406ee2c, type: 3}
+  powerUpIcon: {fileID: 21300000, guid: 3aa4ffd1935b2af4da18bbc4dc158016, type: 3}
   powerUpName: "Sandevistan \nMk.5"
   description: 'Skill
 
