@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7decd390af58b4b91302a80e8cc3aa, type: 3}
   m_Name: CritChance
   m_EditorClassIdentifier: 
-  powerUpIcon: {fileID: 21300000, guid: 6f4409ce938bf9447a36e531f7755ca7, type: 3}
+  powerUpIcon: {fileID: 21300014, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: Penetrator
   description: Increases Crit Chance by 6%
   powerUpType: 3

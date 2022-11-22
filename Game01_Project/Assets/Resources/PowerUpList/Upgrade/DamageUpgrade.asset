@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3506722abcd0aed4da8f3accd96b641f, type: 3}
   m_Name: DamageUpgrade
   m_EditorClassIdentifier: 
-  powerUpIcon: {fileID: 21300014, guid: 358b5d9f23bc9413e87c9948acc67ee1, type: 3}
+  powerUpIcon: {fileID: 21300004, guid: febaf98c9e2e16b4693de2178a533b43, type: 3}
   powerUpName: Crunch
   description: Increases Damage by 15%
   powerUpType: 3
